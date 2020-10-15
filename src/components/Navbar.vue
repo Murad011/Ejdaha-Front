@@ -8,8 +8,9 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Free</b-nav-item>
-        <b-nav-item href="#" >Free</b-nav-item>
+        <b-nav-item href="#">New Delivery</b-nav-item>
+        <b-nav-item href="#" >Staticties</b-nav-item>
+        <b-nav-item href="#" >Courier Home Page</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-form> 
