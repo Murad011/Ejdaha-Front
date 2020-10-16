@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 import 'leaflet/dist/leaflet.css';
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+=======
+>>>>>>> 2bd2612618983aafe95feee3163c4e849731c946
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
+<<<<<<< HEAD
 import { Icon } from 'leaflet';
 
 delete Icon.Default.prototype._getIconUrl;
@@ -16,11 +20,25 @@ Icon.Default.mergeOptions({
 });
 
 
+=======
+import VueRouter from 'vue-router'
+>>>>>>> 2bd2612618983aafe95feee3163c4e849731c946
 
+Vue.use(VueRouter)
 Vue.config.productionTip = false
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
-
+import Header from './components/Header.vue'
+import Staticties from './components/Staticties.vue'
+const router = new VueRouter({
+  routes: [
+    {path: '/', component: Header },
+    {path: '/staticties', component: Staticties}
+  ]
+})
 
 new Vue({
   render: h => h(App),
+  router
 }).$mount('#app')
