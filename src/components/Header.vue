@@ -15,9 +15,9 @@
             <div class="face face2">
                 <div class="content">
                     <h3>
-                        <a href="#" target="_blank">Total Free Couriers</a>
+                        <a href="#" target="_blank" class="font">Total Free Couriers</a>
                     </h3>
-                    <p>Ejdaha Delivery</p>
+                    <p class="font">Ejdaha Delivery</p>
                 </div>
             </div>
         </div>
@@ -34,9 +34,9 @@
             <div class="face face2">
                 <div class="content">
                     <h3>
-                        <a href="#" target="_blank">Total Busy Couriers</a>
+                        <a href="#" target="_blank" class="font">Total Busy Couriers</a>
                     </h3>
-                    <p>Ejdaha Delivery</p>
+                    <p class="font">Ejdaha Delivery</p>
                 </div>
             </div>
         </div>
@@ -53,9 +53,9 @@
             <div class="face face2">
                 <div class="content">
                     <h3>
-                        <a href="#" target="_blank">Total Delivery Packages</a>
+                        <a href="#" target="_blank" class="font">Total Delivery Packages</a>
                     </h3>
-                    <p>Ejdaha Delivery</p>
+                    <p class="font">Ejdaha Delivery</p>
                 </div>
             </div>
         </div>
@@ -89,8 +89,6 @@ export default {
     
 }
 
-
-
 .container .card .icon {
     position: absolute;
     top: 0;
@@ -118,6 +116,7 @@ export default {
     flex: 2;
     text-align: center;
     line-height: 2.8;
+    font-family: 'Commissioner', sans-serif;
     
     
     
@@ -163,6 +162,9 @@ i {
     height: 200px;
     transition: 0.5s;
     
+}
+.font {
+    font-family: 'Raleway', sans-serif;
 }
 
 .container .card .face.face1 {
