@@ -50,7 +50,8 @@
 
 <style scoped>
 .map{
-    height:100vh;
+    height:70vh;
+    width:auto;
 }
 
 </style>
