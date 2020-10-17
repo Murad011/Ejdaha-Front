@@ -1,4 +1,6 @@
 import 'leaflet/dist/leaflet.css';
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
@@ -24,11 +26,12 @@ Vue.use(IconsPlugin)
 
 import Header from './components/Header.vue'
 import Staticties from './components/Staticties.vue'
+import Delivery from './components/Delivery.vue'
 const router = new VueRouter({
   routes: [
     {path: '/', component: Header },
-    {path: '/staticties', component: Staticties}
-    
+    {path: '/staticties', component: Staticties},
+    {path:'/delivery',component:Delivery}
   ]
 })
 
