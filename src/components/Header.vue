@@ -62,14 +62,21 @@
     </div>
   </div>
 
+    <Map/>
    
 </div>
   
 </template>
 
 <script>
+
+import Map from "./Map.vue";
+
 export default {
-    name : 'Header'
+    name : 'Header',
+    components:{
+        Map
+    }
 }
 </script>
 

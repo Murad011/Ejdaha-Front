@@ -10,7 +10,7 @@
       <b-navbar-nav>
         <b-nav-item ><router-link to="/">Home</router-link></b-nav-item>
         <b-nav-item ><router-link to="/staticties">Staticties</router-link></b-nav-item>
-        <b-nav-item href="#" >Courier Home Page</b-nav-item>
+        <b-nav-item href="#" >New Delivery list Page</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-form> 
