@@ -8,14 +8,9 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-<<<<<<< HEAD
-        <b-nav-item><router-link to="/new_delivery"> New Delivery </router-link></b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
-=======
         <b-nav-item href="#">New Delivery</b-nav-item>
         <b-nav-item href="#" >Staticties</b-nav-item>
         <b-nav-item href="#" >Courier Home Page</b-nav-item>
->>>>>>> 21e3ed4eb9cc2edd87354efdbb3c8878431f1b4f
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-form> 
