@@ -3,8 +3,11 @@
    
     <Navbar />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
    
+=======
+>>>>>>> b4b78b95fe074716897b2cf991e2f679b970edfb
     
 >>>>>>> acdd3fb027ec4a6a5c5cdcb317b3183b86bb721b
     <router-view></router-view>
@@ -25,7 +28,6 @@ import Navbar from './components/Navbar.vue'
 >>>>>>> acdd3fb027ec4a6a5c5cdcb317b3183b86bb721b
 
 
-
 export default {
   name: 'App',
   components: {
@@ -38,10 +40,16 @@ export default {
 
 =======
   
-    
   }
    
+<<<<<<< HEAD
 >>>>>>> acdd3fb027ec4a6a5c5cdcb317b3183b86bb721b
+=======
+    
+    
+  
+
+>>>>>>> b4b78b95fe074716897b2cf991e2f679b970edfb
 }
 </script>
 

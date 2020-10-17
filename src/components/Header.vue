@@ -27,9 +27,13 @@
         <p class="text">Raiting</p>
      </div>
     
-    <Map />
+ 
     
-   </div>
+   
+  
+<Map/>
+   
+</div>
   
 </template>
 
@@ -40,7 +44,6 @@ export default {
     components: {
         Map
     }
-   
 }
 </script>
 
