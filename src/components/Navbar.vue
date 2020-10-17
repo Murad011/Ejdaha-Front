@@ -9,8 +9,11 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item ><router-link to="/">Home</router-link></b-nav-item>
-        <b-nav-item ><router-link to="/staticties">Staticties</router-link></b-nav-item>
-        <b-nav-item href="#" >New Delivery List Page</b-nav-item>
+        <b-nav-item ><router-link to="/staticties">Statistika</router-link></b-nav-item>
+        <b-nav-item ><router-link to="/sifarishler_siyahisi">Sifarishler siyahisi</router-link></b-nav-item>
+        
+        
+         <b-nav-item ><router-link to="/delivery">Delivery</router-link></b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-form> 
