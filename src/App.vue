@@ -2,7 +2,8 @@
   <div id="app">
    
     <Navbar />
-    <Map/>
+   
+    
     <router-view></router-view>
       
      
@@ -14,21 +15,19 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Map from './components/Map.vue'
+
+
 
 
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    Map
+    Navbar
+  
+    
   }
    
-    
-    
-  },
-
 }
 </script>
 
