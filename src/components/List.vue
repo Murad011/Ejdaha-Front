@@ -11,7 +11,7 @@
       </thead>
       <tbody>
       <tr v-for="j in filterCustomer" :key="j.id">
-        <td >
+        <td>
             <router-link :to="'mushterinin_sifarisi/'+j.id">
             {{j.id}}
             </router-link>
@@ -96,8 +96,10 @@ export default {
   }
 
   #thead{
-      background-color:rgb(144, 216, 216)
-  }
+      background-color: #17a2b8 !important;
+    
+
+}
 
 
   

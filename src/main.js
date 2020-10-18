@@ -29,15 +29,17 @@ import Header from './components/Header.vue'
 import Staticties from './components/Staticties.vue'
 import List from "./components/List.vue";
 import NewDelivery from "./components/NewDelivery.vue";
+import SifarishiTamamla from './components/SifarishTamamla.vue'
 
-import Delivery from './components/Delivery.vue'
+
+
 const router = new VueRouter({
   routes: [
     {path: '/', component: Header },
     {path: '/staticties', component: Staticties},
-    {path:'/delivery',component:Delivery},
-    {path:'/sifarisler_sehifesi', component:List},
-    {path:'/musterinin_sifarisi/:id',component:NewDelivery}
+    {path:'/sifarishler_siyahisi', component:List},
+    {path:'/mushterinin_sifarisi/:id',component:NewDelivery},
+    {path:'/sifarishi_tamamla', component:SifarishiTamamla}
   ]
 })
 
