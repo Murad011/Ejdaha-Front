@@ -118,5 +118,6 @@ export default {
     width: 500px;
     height: 120px;
     margin: auto;
+    padding: 10px;
 }
 </style>

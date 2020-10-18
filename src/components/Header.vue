@@ -31,17 +31,22 @@
     
    
   
-   <Map/>
+
+<Map/>
+ 
+
    
 </div>
   
 </template>
 
 <script>
+
 import Map from './Map.vue'
 export default {
     components: {
         Map
+       
     }
 }
 </script>
@@ -68,6 +73,7 @@ export default {
     transform: translate(-50%, -50%);
     justify-content: center;
     display: flex;
+   
 }
 
 @media screen and (max-width: 767px) {

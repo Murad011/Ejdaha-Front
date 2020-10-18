@@ -11,28 +11,28 @@
       </thead>
       <tbody>
       <tr v-for="j in filterCustomer" :key="j.id">
-        <td >
-            <router-link :to="'mushterinin_sifarisi/'+j.id">
+        <td>
+            <router-link :to="'sifarishi_tamamla/'+j.id">
             {{j.id}}
             </router-link>
         </td> 
         <td>
-          <router-link :to="'mushterinin_sifarisi/'+j.id">
+          <router-link :to="'sifarishi_tamamla/'+j.id">
             {{j.name}}
           </router-link>
         </td>
         <td>
-          <router-link :to="'mushterinin_sifarisi/'+j.id">
+          <router-link :to="'sifarishi_tamamla/'+j.id">
             {{j.username}}
           </router-link>
         </td>
         <td>
-            <router-link :to="'mushterinin_sifarisi/'+j.id">
+            <router-link :to="'sifarishi_tamamla/'+j.id">
             {{j.website}}
             </router-link>
         </td>
         <td>
-            <router-link :to="'mushterinin_sifarisi/'+j.id">
+            <router-link :to="'sifarishi_tamamla/'+j.id">
             {{j.address.street}}
             </router-link>
         </td>
@@ -96,8 +96,10 @@ export default {
   }
 
   #thead{
-      background-color:rgb(144, 216, 216)
-  }
+      background-color: #17a2b8 !important;
+    
+
+}
 
 
   
