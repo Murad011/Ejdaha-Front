@@ -16,7 +16,6 @@ Icon.Default.mergeOptions({
 });
 
 
-import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -36,7 +35,7 @@ const router = new VueRouter({
     {path: '/', component: Header },
     {path: '/staticties', component: Staticties},
     {path:'/delivery',component:Delivery},
-    {path:'/sifarisler_sehifesi', component:List},
+    {path:'/sifarishler_siyahisi', component:List},
     {path:'/musterinin_sifarisi/:id',component:NewDelivery}
   ]
 })

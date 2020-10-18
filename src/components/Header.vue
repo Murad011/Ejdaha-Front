@@ -31,7 +31,7 @@
     
    
   
-<Map/>
+   <Map/>
    
 </div>
   
@@ -40,7 +40,6 @@
 <script>
 import Map from './Map.vue'
 export default {
-    name : 'Header',
     components: {
         Map
     }

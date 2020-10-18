@@ -17,11 +17,7 @@
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
     "vue-router": "^3.4.6",
-<<<<<<< HEAD
-    "vue2-leaflet": "^2.6.0"
-=======
     "vue2-leaflet": "^2.5.2"
->>>>>>> b4b78b95fe074716897b2cf991e2f679b970edfb
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

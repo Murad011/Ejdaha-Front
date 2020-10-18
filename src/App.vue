@@ -2,10 +2,7 @@
   <div id="app">
    
     <Navbar />
-<<<<<<< HEAD
-=======
     
->>>>>>> b4b78b95fe074716897b2cf991e2f679b970edfb
     <router-view></router-view>
       
      
@@ -25,11 +22,8 @@ export default {
   name: 'App',
   components: {
     Navbar
-<<<<<<< HEAD
-=======
   
   }
->>>>>>> b4b78b95fe074716897b2cf991e2f679b970edfb
    
     
     
