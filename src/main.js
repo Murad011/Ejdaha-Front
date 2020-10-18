@@ -17,7 +17,6 @@ Icon.Default.mergeOptions({
 
 
 
-
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -28,7 +27,6 @@ Vue.use(IconsPlugin)
 import Header from './components/Header.vue'
 import Staticties from './components/Staticties.vue'
 import List from "./components/List.vue";
-import NewDelivery from "./components/NewDelivery.vue";
 import SifarishiTamamla from './components/SifarishTamamla.vue'
 
 
@@ -38,8 +36,7 @@ const router = new VueRouter({
     {path: '/', component: Header },
     {path: '/staticties', component: Staticties},
     {path:'/sifarishler_siyahisi', component:List},
-    {path:'/mushterinin_sifarisi/:id',component:NewDelivery},
-    {path:'/sifarishi_tamamla', component:SifarishiTamamla}
+    {path:'/sifarishi_tamamla/:id',component:SifarishiTamamla},
   ]
 })
 

@@ -44,7 +44,6 @@
 
 import Map from './Map.vue'
 export default {
-    name : 'Header',
     components: {
         Map
        

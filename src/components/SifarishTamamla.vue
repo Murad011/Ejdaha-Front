@@ -1,5 +1,6 @@
 <template>
   <div class="filter">
+
       <table class="font" id="customer">
           <tr>
               <th>ID</th>
@@ -58,73 +59,40 @@
               <th>1500$</th>
           </tr>
       </table>
-
          <table class="font" id="courier">
           
           <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Surname</th>
-              <th>Adress</th>
-              <th>Price</th>
+              <th  v-for="data in table_head" :key="data">{{data}}</th>
           </tr>
           <tr>
-              <th>1</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>2</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-            <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
+             <td> {{customer.id}} </td>
+             <td> {{customer.name}} </td>
+             <td> {{customer.username}} </td>
+             <td>{{customer.website}}</td>
+             <td> {{customer.address.city}} </td> 
           </tr>
       </table>
   </div>
 </template>
 
 <script>
-export default {
-    name: 'SifarishiTamamla'
-    
+export default {  
+  data(){
+    return{
+      id: this.$route.params.id,
+      customer: {},
+      table_head:['No','Ad',"Soyad",'Sifarish','Location']
+    }
+  },
+  created(){
+
+        fetch('https://jsonplaceholder.typicode.com/users/'+this.id)
+        .then(response => response.json())
+        .then(data => {
+          this.customer = data
+          console.log(data.address.city)
+          })
+  }
 }
 </script>
 
