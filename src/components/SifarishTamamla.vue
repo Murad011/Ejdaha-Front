@@ -97,27 +97,20 @@ export default {
 </script>
 
 <style scoped>
-*{
+/* *{
         margin: 0;
         padding: 0;
         outline: 0;
-}
+} */
 
 .filter{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    display: flex;
     opacity: .7;
+    margin: 15% 35%;
 }
 
 #customer {
-    position: absolute;
-    z-index: 2;
-    top: 30%;
-    right: 1%;
+    
     transform: translate(-50%, -50%);
     width: 30%;
     height: 300px;
@@ -127,13 +120,12 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
+    flex: 1;
+    margin: 50px;
+    
 }
 
 #courier {
-    position: absolute;
-    z-index: 2;
-    left: 30%;
-    top: 30%;
     transform: translate(-50%, -50%);
     width: 30%;
     height: 300px;
@@ -143,6 +135,8 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
+    flex: 1;
+    margin: 50px;
 }
 th,td {
     padding: 12px 15px;
