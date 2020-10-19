@@ -1,8 +1,10 @@
 <template>
   <div>
     
-      <div class="filter">
-          <table class="font" id="customer">
+      <div class="container m-auto py-5">
+          <div class="row">
+              <div class="col">
+              <table class="font" id="customer">
           
           <tr>
               <th  v-for="data in table_head" :key="data">{{data}}</th>
@@ -15,7 +17,9 @@
              <td> {{customer.address.city}} </td> 
           </tr>
       </table>
-         <table class="font" id="courier">
+      </div>
+      <div class="col">
+         <table class="font col" id="courier">
           <tr>
               <th>ID</th>
               <th>Name</th>
@@ -31,25 +35,35 @@
               <td>1500$</td>
           </tr>           
       </table>
+      </div>
+          </div>
 
       </div>
       <button id="submit_button"> Submit </button>
     <div class="search_div">
       <input type="text" v-model="search"  id="searchList" placeholder="Search...">
     </div>
+    <div class="container">
+        <Map/>
+    </div> 
       
   </div>
 </template>
 
 <script>
+import Map from './Map.vue'
 export default {  
+        components: {
+            Map
+           
+        },
   data(){
     return{
       id: this.$route.params.id,
       customer: {},
       table_head:['No','Ad',"Soyad",'Sifarish','Location']
-    }
-  },
+    }},
+  
   created(){
 
         fetch('https://jsonplaceholder.typicode.com/users/'+this.id)
@@ -63,38 +77,18 @@ export default {
 </script>
 
 <style scoped>
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
+
+#map{
+    margin-top: 20px;
 }
-/* *{
-        margin: 0;
-        padding: 0;
-        outline: 0;
-} */
 
-
-.filter{
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    opacity: .7;
-    margin-top: 10%;
-    margin-left:30%;margin-right: 30%;
-
+#contain{
+    margin: auto;
 }
+
 
 #customer {
-    position: absolute;
-    top: 30%;
-    right: 1%;
-    
-    transform: translate(-50%, -50%);
-    width: 30%;
+    /* width: 30%; */
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -102,17 +96,13 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
-    flex: 1;
-    margin: 50px;
+    
+    
     
 }
 
 #courier {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    width: 30%;
+    /* width: 30%; */
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -120,8 +110,7 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
-    flex: 1;
-    margin: 50px;
+    
 }
 th,td {
     padding: 12px 15px;
@@ -150,7 +139,7 @@ th,td {
 
  .search_div{
     text-align: center;
-    margin-top: 10px;
+    margin: 20px;
      
 
  }
