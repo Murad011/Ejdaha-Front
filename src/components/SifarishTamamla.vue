@@ -65,6 +65,11 @@ export default {
     padding: 0;
     outline: 0;
 }
+/* *{
+        margin: 0;
+        padding: 0;
+        outline: 0;
+} */
 
 
 .filter{
@@ -73,13 +78,16 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
     opacity: .7;
+    margin: 15% 35%;
 }
 
 #customer {
     position: absolute;
     top: 30%;
     right: 1%;
+    
     transform: translate(-50%, -50%);
     width: 30%;
     height: 300px;
@@ -89,6 +97,9 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
+    flex: 1;
+    margin: 50px;
+    
 }
 
 #courier {
@@ -104,6 +115,8 @@ export default {
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     background:  #46ddf5;
     text-align: center;
+    flex: 1;
+    margin: 50px;
 }
 th,td {
     padding: 12px 15px;
