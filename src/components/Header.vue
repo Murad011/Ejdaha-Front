@@ -1,39 +1,41 @@
 <template>
     <div class="content">
+        <div class="card_div">
     <div class="card">
         <div class="icon"><i class="fas fa-user"></i></div>
         <img class="title1" src="./image/freecourier.png" alt="">
         <a href="#" target="_blank" class="font">Total Busy Couriers</a>
-        <p class="text">Ejdaha Delivery</p>
+        <p class="text">10</p>
     
     </div>
     <div class="card">
         <div class="icon"><i class="fas fa-heart"></i></div>
         <img class="title1" src="./image/busycourier.png" alt="">
         <a href="#" target="_blank" class="font">Total Busy Couriers</a>
-        <p class="text">Busy Crouires</p>
+        <p class="text">20</p>
     
     </div>
     <div class="card">
         <div class="icon"><i class="fas fa-phone"></i></div>
         <img class="title1" src="./image/packages.png" alt="">
         <a href="#" target="_blank" class="font">Total Delivery Packages</a>
-        <p class="text">Delivery Pacgakes</p>
+        <p class="text">30</p>
     </div>
      <div class="card">
         <div class="icon"><i class="fas fa-phone"></i></div>
         <img class="title1" src="./image/rating.png" alt="">
        <a href="#" target="_blank" class="font">Raiting</a>
-        <p class="text">Raiting</p>
-     </div>
-    
- 
+        <p class="text">40</p>
+    </div>
+    </div>
+<div class="container">
+    <Map/>
+</div>    
+
     
    
   
 
-<Map/>
- 
 
    
 </div>
@@ -52,35 +54,27 @@ export default {
 </script>
 
 <style scoped>
-.template{
-    width: 100vh;
-    background-color: #1d1d1d;
-    margin: 0;
-    font-family: 'Commissioner', sans-serif;
-    height: 100vh;
+
+.card_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+   
+    /* margin: auto; */
 }
+
 .title1{
     
     vertical-align: middle;
     margin: 0 auto;
     margin-top: 8%;
 }
-.content{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    display: flex;
-   
-}
 
-@media screen and (max-width: 767px) {
-    .content {
-        margin: 50px auto;
-        flex-direction: column;
-    }
+
+.content{
+    z-index: 1;
+    
 }
 
 .card {
@@ -95,10 +89,6 @@ export default {
     border: 2px solid rgba(7,7,7, 0.12);
     font-size: 16px;
     transition: all 0.3s ease;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     transition: all 0.3 ease;
     box-sizing: border-box;
@@ -165,8 +155,8 @@ export default {
     font-family: 'Raleway', sans-serif;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
-
 
 
 

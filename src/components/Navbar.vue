@@ -21,7 +21,8 @@
             <em  class="font">User</em>
           </template>
           <b-dropdown-item href="#" class="font">Profile</b-dropdown-item>
-          <b-dropdown-item href="#" class="font">Sign Out</b-dropdown-item>
+          <b-dropdown-item href="#" class="font">Log In</b-dropdown-item>
+          <b-dropdown-item href="#" class="font">Register</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

@@ -3,61 +3,20 @@
 
       <table class="font" id="customer">
           <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>Name</th>
               <th>Surname</th>
-              <th>Adress</th>
-              <th>Price</th>
+              <th>Telephone</th>
+              <th>Order</th>
           </tr>
           <tr>
               <th>1</th>
               <th>Fabiden</th>
               <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
+              <th>+994 055 898 97 53</th>
+              <th>2 doner 1 ayran</th>
           </tr>
-           <tr>
-              <th>2</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-            <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
+        
       </table>
          <table class="font" id="courier">
           
@@ -72,6 +31,10 @@
              <td> {{customer.address.city}} </td> 
           </tr>
       </table>
+      <!-- <div class="sifaris">
+           <input type="text" v-model="search"  id="searchList" placeholder="Search...">
+      </div> -->
+   
   </div>
 </template>
 
@@ -98,24 +61,23 @@ export default {
 
 <style scoped>
 *{
-        margin: 0;
-        padding: 0;
-        outline: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
 
+
 .filter{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
     opacity: .7;
 }
 
 #customer {
     position: absolute;
-    z-index: 2;
     top: 30%;
     right: 1%;
     transform: translate(-50%, -50%);
@@ -131,7 +93,6 @@ export default {
 
 #courier {
     position: absolute;
-    z-index: 2;
     left: 30%;
     top: 30%;
     transform: translate(-50%, -50%);
@@ -150,7 +111,11 @@ th,td {
 }
 .font {
     font-family: 'Raleway', sans-serif;
- }
+}
+
+
+
+
 
 
 
