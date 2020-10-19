@@ -1,15 +1,27 @@
 <template>
-  <mdb-container class="staticties">
+  <div id="statistic_div">
+    <div class="row">
  
-    <mdb-line-chart id="monthstaticties"
+    <div class="col">
+      <p class="w-50  text-center">Month staticties</p>
+      <mdb-line-chart id="monthstaticties"
       :data="lineChartData"
       :options="lineChartOptions"
       :width="600"
       :height="300"
+      
     ></mdb-line-chart>
-    <CouirerStaticties />
+    </div>
     
-</mdb-container>
+  
+    <div class="col text-center">
+    <p class="w-60 text-center">Courier staticties</p>
+      <CouirerStaticties />
+    </div>
+    </div>
+
+  </div>
+    
 
 
 
@@ -17,12 +29,12 @@
 
 <script>
 import CouirerStaticties from './CouirerStaticties.vue'
-import { mdbLineChart, mdbContainer } from "mdbvue";
+import { mdbLineChart } from "mdbvue";
 export default {
     name: "ChartPage",
     components: {
       mdbLineChart,
-      mdbContainer,
+      
       CouirerStaticties
     },
     data() {
@@ -82,23 +94,20 @@ export default {
 </script>
 
 <style>
-.area {
-    width: 500px;
-    height: 120px;
-    margin: auto;
-    padding: 10px;
-}
-.staticties {
-  display: flex;
-  
-  
-}
+
+
 
 #monthstaticties{
-  margin-top: 18%;
-  margin-left: -10%;
+  width: 100%;
 
 }
+
+.stat{
+  text-align: center;
+}
+
+
+
 
 
 

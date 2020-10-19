@@ -76,12 +76,15 @@ export default {
 
 <style scoped>
 .division{
+
   text-align: center;
+  
 }
 
-  .table{
-    width: 100%;
-  }
+tr:nth-child(even){
+  background:  #17a2b8 !important
+}
+
 
   .searchBar{
     width: 90%;
