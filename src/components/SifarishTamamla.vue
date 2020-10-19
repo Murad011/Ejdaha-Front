@@ -63,13 +63,24 @@ export default {
 </script>
 
 <style scoped>
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
 /* *{
         margin: 0;
         padding: 0;
         outline: 0;
 } */
 
+
 .filter{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     opacity: .7;
     margin-top: 10%;
@@ -78,6 +89,9 @@ export default {
 }
 
 #customer {
+    position: absolute;
+    top: 30%;
+    right: 1%;
     
     transform: translate(-50%, -50%);
     width: 30%;
@@ -94,6 +108,9 @@ export default {
 }
 
 #courier {
+    position: absolute;
+    left: 30%;
+    top: 30%;
     transform: translate(-50%, -50%);
     width: 30%;
     height: 300px;
@@ -112,7 +129,13 @@ th,td {
 }
 .font {
     font-family: 'Raleway', sans-serif;
- }
+}
+
+
+
+
+
+
 
  #submit_button{
     position: absolute;
