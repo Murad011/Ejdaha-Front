@@ -1,65 +1,8 @@
 <template>
-  <div class="filter">
-
-      <table class="font" id="customer">
-          <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Surname</th>
-              <th>Adress</th>
-              <th>Price</th>
-          </tr>
-          <tr>
-              <th>1</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>2</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>3</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-            <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-           <tr>
-              <th>4</th>
-              <th>Fabiden</th>
-              <th>LeBlanc</th>
-              <th>Fabiden@gmail.com</th>
-              <th>1500$</th>
-          </tr>
-      </table>
-         <table class="font" id="courier">
+  <div>
+    
+      <div class="filter">
+          <table class="font" id="customer">
           
           <tr>
               <th  v-for="data in table_head" :key="data">{{data}}</th>
@@ -72,6 +15,29 @@
              <td> {{customer.address.city}} </td> 
           </tr>
       </table>
+         <table class="font" id="courier">
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Adress</th>
+              <th>Price</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>Fabiden</td>
+              <td>LeBlanc</td>
+              <td>Fabiden@gmail.com</td>
+              <td>1500$</td>
+          </tr>           
+      </table>
+
+      </div>
+      <button id="submit_button"> Submit </button>
+    <div class="search_div">
+      <input type="text" v-model="search"  id="searchList" placeholder="Search...">
+    </div>
+      
   </div>
 </template>
 
@@ -106,7 +72,9 @@ export default {
 .filter{
     display: flex;
     opacity: .7;
-    margin: 15% 35%;
+    margin-top: 10%;
+    margin-left:30%;margin-right: 30%;
+
 }
 
 #customer {
@@ -145,5 +113,29 @@ th,td {
 .font {
     font-family: 'Raleway', sans-serif;
  }
+
+ #submit_button{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 50%;
+    border: 1px solid green;
+    background-color: greenyellow;
+    padding: 20px;
+    color: blue;
+ }
+
+ .search_div{
+    text-align: center;
+    margin-top: 10px;
+     
+
+ }
+
+ #searchList{
+    width: 70%;
+    
+  }
+
 
 </style>
