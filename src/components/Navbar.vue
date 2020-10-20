@@ -8,9 +8,9 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item ><router-link to="/">Home</router-link></b-nav-item>
-        <b-nav-item ><router-link to="/staticties">Statistika</router-link></b-nav-item>
-        <b-nav-item ><router-link to="/sifarishler_siyahisi">Sifarishler siyahisi</router-link></b-nav-item>
+        <b-nav-item ><router-link class="home" to="/" >Home</router-link></b-nav-item>
+        <b-nav-item ><router-link class="static" to="/staticties">Statistika</router-link></b-nav-item>
+        <b-nav-item ><router-link class="sifaris" to="/sifarishler_siyahisi">Sifarishler siyahisi</router-link></b-nav-item>
         
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
@@ -42,4 +42,25 @@ export default {
 .font {
     font-family: 'Raleway', sans-serif;
 }
+
+template{
+  text-decoration: none;
+}
+
+.home {
+  text-decoration: none;
+
+}
+
+.static{
+  text-decoration: none;
+    
+}
+
+.sifaris {
+  text-decoration: none;
+}
+
+
+
 </style>
