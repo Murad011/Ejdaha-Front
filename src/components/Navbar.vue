@@ -1,37 +1,26 @@
 <template>
-  <div class="hello">
-    <div>
-  <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">Ejdaha Delivery</b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <b-nav-item ><router-link class="home" to="/" >Home</router-link></b-nav-item>
-        <b-nav-item ><router-link class="static" to="/staticties">Statistika</router-link></b-nav-item>
-        <b-nav-item ><router-link class="sifaris" to="/sifarishler_siyahisi">Sifarishler siyahisi</router-link></b-nav-item>
-        
-      </b-navbar-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-form> 
-        </b-nav-form>
-      <b-nav-item-dropdown right>
-          <template v-slot:button-content>
-            <em  class="font">User</em>
-          </template>
-          <b-dropdown-item href="#" class="font">Profile</b-dropdown-item>
-          <b-dropdown-item href="#" class="font">Log In</b-dropdown-item>
-          <b-dropdown-item href="#" class="font">Register</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+<div class="wrapper">
+    <div class="sidebar">
+       <h2 class="ejdaha">Ejdaha Delivery</h2>
+        <ul>
+            <li><router-link to="/"><i class="fas fa-home"></i>Home</router-link></li>
+            <li><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
+            <li><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
+        </ul> 
+        <div class="social_media">
+          <router-link to="login"><i class="fas fa-sign-out-alt"></i></router-link>
+          
+      </div>
+    </div>
+ 
 </div>
-  </div>
+
+
 </template>
 
 <script>
+     
 export default {
   name: 'Navbar',
   
@@ -39,10 +28,11 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 .font {
     font-family: 'Raleway', sans-serif;
 }
-
+/* 
 template{
   text-decoration: none;
 }
@@ -59,8 +49,110 @@ template{
 
 .sifaris {
   text-decoration: none;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+body{
+   background-color: #f3f5f9;
+}
+.social_media{
+  margin-bottom: 11px;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
 
 
 </style>

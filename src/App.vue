@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar id="nav" />
     
-    <router-view></router-view>
+    <router-view id="rota"></router-view>
       
      
       
@@ -33,7 +33,15 @@ export default {
 <style>
 #app {
   font-family: 'Commissioner', sans-serif;
-  /* text-align: center;
-  margin-top: 30px; */
+  display: flex;
+
+}
+
+#nav{
+  flex: 1;
+}
+
+#nav+#rota{
+  flex: 7;
 }
 </style>
