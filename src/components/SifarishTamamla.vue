@@ -94,7 +94,7 @@ export default {
     border-spacing: 0;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
-    background:  #46ddf5;
+    background:  #4b4276;
     text-align: center;
     
     
@@ -108,7 +108,7 @@ export default {
     border-spacing: 0;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
-    background:  #46ddf5;
+    background:  #4b4276;
     text-align: center;
     
 }
@@ -128,13 +128,13 @@ th,td {
 
  #submit_button{
     position: absolute;
-    top: 70px;
+    top: 75px;
     right: 20px;
     border-radius: 50%;
-    border: 1px solid green;
-    background-color: greenyellow;
+    border: 1px solid  #4b4276 !important;
+    background-color: #4b4276 !important;
     padding: 20px;
-    color: blue;
+    color: white;
  }
 
  .search_div{

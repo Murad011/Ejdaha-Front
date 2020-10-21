@@ -26,7 +26,8 @@ Vue.use(IconsPlugin)
 
 import Header from './components/Header.vue'
 import MonthStaticties from './components/MonthStaticties.vue'
-import List from "./components/List.vue";
+import Login from './components/Login.vue'
+import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
 
 
@@ -36,7 +37,8 @@ const router = new VueRouter({
     {path: '/', component: Header },
     {path: '/staticties', component: MonthStaticties},
     {path:'/sifarishler_siyahisi', component:List},
-    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla}
+    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
+    {path:'/login', component:Login}
   ],
   mode:'history'
 })

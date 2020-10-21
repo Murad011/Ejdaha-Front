@@ -82,7 +82,7 @@ export default {
 }
 
 tr:nth-child(even){
-  background:  #17a2b8 !important
+  background:  #4b4276 !important
 }
 
 
@@ -99,7 +99,7 @@ tr:nth-child(even){
   }
 
   #thead{
-      background-color: #17a2b8 !important;
+      background-color: #4b4276 !important;
     
 
 }

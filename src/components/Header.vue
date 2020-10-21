@@ -2,27 +2,27 @@
     <div class="content">
         <div class="card_div">
     <div class="card">
-        <div class="icon"><i class="fas fa-user"></i></div>
+        
         <img class="title1" src="./image/freecourier.png" alt="">
         <a href="#" target="_blank" class="font">Total Busy Couriers</a>
         <p class="text">10</p>
     
     </div>
     <div class="card">
-        <div class="icon"><i class="fas fa-heart"></i></div>
+        
         <img class="title1" src="./image/busycourier.png" alt="">
         <a href="#" target="_blank" class="font">Total Busy Couriers</a>
         <p class="text">20</p>
     
     </div>
     <div class="card">
-        <div class="icon"><i class="fas fa-phone"></i></div>
+       
         <img class="title1" src="./image/packages.png" alt="">
         <a href="#" target="_blank" class="font">Total Delivery Packages</a>
         <p class="text">30</p>
     </div>
      <div class="card">
-        <div class="icon"><i class="fas fa-phone"></i></div>
+    
         <img class="title1" src="./image/rating.png" alt="">
        <a href="#" target="_blank" class="font">Raiting</a>
         <p class="text">40</p>
@@ -82,7 +82,7 @@ export default {
     max-width: 230px;
     min-width: 150px;
     height: 110px;
-    background-color: #17a2b8 !important;
+    background-color: #4b4276 !important;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.24);
@@ -94,6 +94,7 @@ export default {
     box-sizing: border-box;
     box-shadow: 0 30px 60px rgba(0,0,0,0.8);
     transform: translateY(-50px);
+    
 }
 
 
@@ -110,11 +111,13 @@ export default {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin: 10px;
+    
 }
 
 
 .card .text {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     color: white;
     font-weight: 200;
@@ -124,6 +127,8 @@ export default {
     opacity: 0;
     max-height: 0;
     transition: all 0.3 ease;
+    margin: 10px;
+    
 }
 
 .card:hover {
