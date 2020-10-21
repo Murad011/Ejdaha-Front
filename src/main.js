@@ -8,12 +8,16 @@ import VueRouter   from "vue-router";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import { Icon } from 'leaflet';
+
+
+
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
   shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
+
 
 
 
@@ -26,8 +30,9 @@ Vue.use(IconsPlugin)
 
 import Header from './components/Header.vue'
 import MonthStaticties from './components/MonthStaticties.vue'
-import List from "./components/List.vue";
+import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
+import Xerite from './components/Xerite.vue'
 
 
 
@@ -36,7 +41,9 @@ const router = new VueRouter({
     {path: '/', component: Header },
     {path: '/staticties', component: MonthStaticties},
     {path:'/sifarishler_siyahisi', component:List},
-    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla}
+    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
+    {path:'/xerite',component:Xerite}
+    
   ],
   mode:'history'
 })

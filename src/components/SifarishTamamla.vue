@@ -61,7 +61,8 @@ export default {
     return{
       id: this.$route.params.id,
       customer: {},
-      table_head:['No','Ad',"Soyad",'Sifarish','Location']
+      table_head:['No','Ad',"Soyad",'Sifarish','Location'],
+      search: ''
     }},
   
   created(){
@@ -72,7 +73,8 @@ export default {
           this.customer = data
           console.log(data.address.city)
           })
-  }
+  },
+  
 }
 </script>
 

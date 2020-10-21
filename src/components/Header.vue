@@ -29,7 +29,8 @@
     </div>
     </div>
 <div class="container">
-    <Map/>
+   <Map/>
+    
 </div>    
 
     

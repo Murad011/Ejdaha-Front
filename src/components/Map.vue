@@ -28,6 +28,8 @@
                 center: L.latLng(40.409264, 49.867092),
                 url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
                 attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+                multiPolyLineOptions : {color:'red'},
+                latlang:[marker,markerb],
                 marker: L.latLng(40.409264, 49.867092),
                 markers:L.latLng(40.58972, 49.66861),
                  markerd:L.latLng(40.4444, 49.80566),
@@ -35,7 +37,14 @@
                   markerg: L.latLng(40.3256, 49.73376),
                   markerl:L.latLng(40.3256, 49.73376),
                   markerz:L.latLng(40.39667, 49.97361),
-                  markerx:L.latLng(40.51903, 50.11438)
+                  markerx:L.latLng(40.51903, 50.11438),
+                  multipolyline :function(){
+                      return{
+                          L.multiPolyline(latlang , multiPolyLineOptions)
+
+                      }
+                       
+                  } 
                
             }
         },
@@ -43,6 +52,7 @@
         LMap,
         LTileLayer,
         LMarker,
+        L.multiPolyline,
         }
        
     }
