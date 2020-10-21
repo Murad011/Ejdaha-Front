@@ -1,4 +1,5 @@
 <template>
+
 <div class="wrapper">
     <div class="sidebar">
        <h2 class="ejdaha">Ejdaha Delivery</h2>
@@ -8,13 +9,14 @@
             <li><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
         </ul> 
         <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <router-link to="login"><i class="fas fa-sign-out-alt"></i></router-link>
+          
       </div>
     </div>
  
 </div>
+
+
 </template>
 
 <script>
@@ -60,6 +62,9 @@ template{
 
 body{
    background-color: #f3f5f9;
+}
+.social_media{
+  margin-bottom: 11px;
 }
 
 .wrapper{
@@ -148,7 +153,6 @@ body{
 .wrapper .main_content .info div{
   margin-bottom: 20px;
 }
-
 
 
 </style>

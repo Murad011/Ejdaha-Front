@@ -2,7 +2,7 @@
 <div class="login">
   <form class="text-center border border-light p-5" action="#!">
 
-    <p class="h4 mb-4">Sign in</p>
+    <p class="h4 mb-4">Register</p>
 
   
     <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
@@ -23,7 +23,7 @@
     </div>
     <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
     <p>Not a member?
-        <a href="">Register</a>
+        <router-link to="/register">Register</router-link>
     </p>
 
     <p>or sign in with:</p>
@@ -31,7 +31,7 @@
     <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
     <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
     <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-google"></i></a>
 
 </form>
 </div>
@@ -48,8 +48,14 @@ export default {
 </script>
 
 <style scoped>
-  .login {
+.login {
     margin-top: auto;
     
-  }
+}
+
+.btn-info{
+  background-color: #4b4276 !important;
+}
+
+
 </style>

@@ -82,9 +82,6 @@ export default {
     margin-top: 20px;
 }
 
-#contain{
-    margin: auto;
-}
 
 
 #customer {
@@ -112,6 +109,8 @@ export default {
     text-align: center;
     
 }
+
+
 th,td {
     padding: 12px 15px;
     
@@ -121,12 +120,7 @@ th,td {
 }
 
 
-
-
-
-
-
- #submit_button{
+#submit_button{
     position: absolute;
     top: 75px;
     right: 20px;
@@ -137,15 +131,15 @@ th,td {
     color: white;
  }
 
- .search_div{
+.search_div{
     text-align: center;
     margin: 20px;
      
 
  }
 
- #searchList{
-    width: 70%;
+#searchList{
+width: 70%;
     
   }
 

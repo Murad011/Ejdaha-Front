@@ -29,6 +29,7 @@ import MonthStaticties from './components/MonthStaticties.vue'
 import Login from './components/Login.vue'
 import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
+import Register from './components/Register.vue'
 
 
 
@@ -38,7 +39,8 @@ const router = new VueRouter({
     {path: '/staticties', component: MonthStaticties},
     {path:'/sifarishler_siyahisi', component:List},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
-    {path:'/login', component:Login}
+    {path:'/login', component:Login},
+    {path:'/register', component:Register}
   ],
   mode:'history'
 })

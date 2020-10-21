@@ -30,6 +30,8 @@
     </div>
 <div class="container">
     <Map/>
+   
+    <p class="flial">Fliallarimiz <i class="far fa-copyright"></i></p>
 </div>    
 
     
@@ -75,6 +77,10 @@ export default {
 .content{
     z-index: 1;
     
+}
+
+.flial{
+   font-family: 'Raleway', sans-serif;
 }
 
 .card {
