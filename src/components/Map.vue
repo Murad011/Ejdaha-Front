@@ -24,7 +24,7 @@
         name: "Map",
         data: function(){
             return{
-                 zoom:13,
+                 zoom:10,
                 center: L.latLng(40.409264, 49.867092),
                 url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
                 attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
