@@ -39,7 +39,7 @@
           </div>
 
       </div>
-      <button id="submit_button"> Submit </button>
+      <button id="submit_button"> Sifarisi Gonder </button>
     <div class="search_div">
       <input type="text" v-model="search"  id="searchList" placeholder="Search...">
     </div>

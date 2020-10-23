@@ -78,6 +78,9 @@ export default {
     color: #4b4276;
 }
 
+.card{
+    font-family: 'Raleway', sans-serif;
+}
 
 
 </style>
