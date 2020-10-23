@@ -34,8 +34,6 @@ import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
 import Xerite from './components/Xerite.vue'
 import Login from './components/Login.vue'
-import List from "./components/List.vue"
-import SifarishTamamla from './components/SifarishTamamla.vue'
 import Register from './components/Register.vue'
 
 

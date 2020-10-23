@@ -51,10 +51,10 @@
 </template>
 
 <script>
-import Map from './Map.vue'
+import Map from './Xerite.vue'
 export default {  
         components: {
-            Map
+            Xerite
            
         },
   data(){

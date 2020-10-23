@@ -31,7 +31,7 @@
 <div class="container">
    <Map/>
     
-    <Map/>
+    
    
     <p class="flial">Fliallarimiz <i class="far fa-copyright"></i></p>
 </div>    
