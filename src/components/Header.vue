@@ -2,46 +2,28 @@
     <div class="content">
         <div class="card_div">
     <div class="card">
-        
-        <img class="title1" src="./image/freecourier.png" alt="">
-        <a href="#" target="_blank" class="font">Total Busy Couriers</a>
-        <p class="text">10</p>
-    
+        <img class="image1" src="./image/freecourier.png" alt="">
+        <em class="font text-white"> Total Free Couriers</em>
+        <b class="font text-white"> 10 </b>
     </div>
+
     <div class="card">
-        
-        <img class="title1" src="./image/busycourier.png" alt="">
-        <a href="#" target="_blank" class="font">Total Busy Couriers</a>
-        <p class="text">20</p>
-    
+        <img class="image2" src="./image/busycourier.png" alt="">
+       <em class="font text-white"> Total Busy Couriers </em>
+       <b class="font text-white"> 10 </b>
     </div>
+
     <div class="card">
-       
-        <img class="title1" src="./image/packages.png" alt="">
-        <a href="#" target="_blank" class="font">Total Delivery Packages</a>
-        <p class="text">30</p>
+       <img class="image3" src="./image/packages.png" alt="">
+       <em class="font text-white"> Total Delivery Packages </em>
+       <b class="font text-white">10 </b>
     </div>
-     <div class="card">
-    
-        <img class="title1" src="./image/rating.png" alt="">
-       <a href="#" target="_blank" class="font">Raiting</a>
-        <p class="text">40</p>
-    </div>
-    </div>
+
+</div>
 <div class="container">
    <Map/>
-    
-    
-   
     <p class="flial">Fliallarimiz <i class="far fa-copyright"></i></p>
 </div>    
-
-    
-   
-  
-
-
-   
 </div>
   
 </template>
@@ -64,22 +46,28 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 5%;
-   
-    /* margin: auto; */
 }
 
-.title1{
-    
-    vertical-align: middle;
+.image1{
     margin: 0 auto;
-    margin-top: 8%;
+    margin-top: 5%;
+    height: 60px;
+}
+
+.image2{
+    margin: 0 auto;
+    margin-top: 5%;
+    height: 60px;
+}
+
+.image3{
+    margin: 0 auto;
+    margin-top: 5%;
+    height: 60px;
 }
 
 
-.content{
-    z-index: 1;
-    
-}
+
 
 .flial{
    font-family: 'Raleway', sans-serif;
@@ -87,27 +75,18 @@ export default {
 
 .card {
     width: 100%;
-    max-width: 230px;
-    min-width: 150px;
-    height: 110px;
-    background-color: #4b4276 !important;
+    height: 100%;
+    background-color: #4882da ;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.24);
     border: 2px solid rgba(7,7,7, 0.12);
-    font-size: 16px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    transition: all 0.3 ease;
+    font-size: 17px;
     box-sizing: border-box;
     box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-    transform: translateY(-50px);
     
-}
 
-
-.icon i {
-    font-size: 36px;
+    
 }
 
 .card .title{
@@ -117,7 +96,6 @@ export default {
     margin-top: 30px;
     color: white;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 4px;
     margin: 10px;
     
@@ -134,41 +112,16 @@ export default {
     letter-spacing: 2px;
     opacity: 0;
     max-height: 0;
-    transition: all 0.3 ease;
     margin: 10px;
     
 }
 
-.card:hover {
-    height: 148px;
-}
-
-.card:hover .info {
-    height: 90%;
-}
-
-.card:hover .text {
-    transition: all 0.3s ease;
-    opacity: 1;
-    max-height: 40px;
-}
-
-.card:hover .icon {
-    background-position: -120px;
-    transition: all 0.3s ease;
-}
-
-.card:hover .icon i{
-    color: #ff4848;
-    opacity: 1;
-    transition: all 0.3s ease;
-}
-
 .font {
     font-family: 'Raleway', sans-serif;
-    color: white;
+    color: black;
     text-decoration: none;
     text-align: center;
+    margin: 10px;
 }
 
 

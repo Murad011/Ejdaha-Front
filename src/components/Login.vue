@@ -17,16 +17,9 @@
                 <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
             </div>
         </div>
-        <div>
-            <a href="">Forgot password?</a>
-        </div>
+        
     </div>
     <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-    <p>Not a member?
-        <router-link to="/register">Register</router-link>
-    </p>
-
-    <p>or sign in with:</p>
 
     <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
     <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
@@ -41,9 +34,49 @@
 
 <script>
 
-
 export default {
- 
+
+    data(){
+        return{
+            email: "",
+            password:"",
+            access:"",
+            refresh:""
+        }
+    },
+    methods:{
+       async logIn(e){
+            e.preventDefault;
+            const data = {
+                email: this.email,
+                password: this.password
+            };
+
+            await fetch('http://127.0.0.1:8000/apis/api/token/',{
+                method:'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                this.refresh = data.refresh
+                this.access = data.access
+                localStorage.setItem("JWT", data.access);
+                console.log('succes ==> ', data);
+
+                this.$router.push('header');
+            })
+            .catch((error) =>{
+                console.log('error ==>', error);
+            });
+
+        }
+    },
+
+
+
 }
 </script>
 
@@ -54,7 +87,8 @@ export default {
 }
 
 .btn-info{
-  background-color: #4b4276 !important;
+  background-color:#4882da !important;
+  background-color: #4882da !important;
   
 }
 

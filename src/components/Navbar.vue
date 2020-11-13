@@ -32,24 +32,7 @@ export default {
 .font {
     font-family: 'Raleway', sans-serif;
 }
-/* 
-template{
-  text-decoration: none;
-}
 
-.home {
-  text-decoration: none;
-
-}
-
-.static{
-  text-decoration: none;
-    
-}
-
-.sifaris {
-  text-decoration: none;
-} */
 
 *{
   margin: 0;
@@ -75,7 +58,8 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: #4882da;
+  background: #4882da;
   padding: 30px 0px;
   position: fixed;
 }
@@ -94,6 +78,8 @@ body{
   border-top: 1px solid rgba(255,255,255,0.05);
 }    
 
+
+
 .wrapper .sidebar ul li a{
   color: #bdb8d7;
   display: block;
@@ -104,7 +90,8 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
+  background-color: #4882da;
+  background-color: #4882da;
 }
     
 .wrapper .sidebar ul li:hover a{
@@ -122,7 +109,8 @@ body{
 .wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
-  background: #594f8d;
+  background:#4882da;
+  background: #4882da;
   height: 40px;
   line-height: 45px;
   text-align: center;
