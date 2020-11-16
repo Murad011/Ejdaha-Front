@@ -54,7 +54,7 @@
 import Xerite from './Xerite.vue'
 export default {  
         components: {
-            Map
+            Xerite
            
         },
   data(){
