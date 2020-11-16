@@ -81,10 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.login {
-    margin-top: auto;
-    
-}
+
 
 .btn-info{
   background-color:#4882da !important;

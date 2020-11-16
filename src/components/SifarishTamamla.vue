@@ -39,7 +39,7 @@
           </div>
 
       </div>
-      <button id="submit_button"> Sifarisi Gonder </button>
+      <router-link to="/preview"><button id="submit_button"> Sifarisi Gonder </button></router-link>
     <div class="search_div">
       <input type="text" v-model="search"  id="searchList" placeholder="Search...">
     </div>
@@ -87,7 +87,6 @@ export default {
 
 
 #customer {
-    /* width: 30%; */
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -101,7 +100,6 @@ export default {
 }
 
 #courier {
-    /* width: 30%; */
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
