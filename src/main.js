@@ -9,6 +9,8 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import { Icon } from 'leaflet';
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+
 
 
 
@@ -37,7 +39,13 @@ import Xerite from './components/Xerite.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBKhuoyfkJTHpR5O5Gt3BGhnQ4PhVP6Vd0',
+    libraries: 'places',
+  },
 
+})
 
 const router = new VueRouter({
   routes: [

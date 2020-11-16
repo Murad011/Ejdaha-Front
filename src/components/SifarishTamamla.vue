@@ -44,14 +44,14 @@
       <input type="text" v-model="search"  id="searchList" placeholder="Search...">
     </div>
     <div class="container">
-        <Map/>
+        <Xerite/>
     </div> 
       
   </div>
 </template>
 
 <script>
-import Map from './Xerite.vue'
+import Xerite from './Xerite.vue'
 export default {  
         components: {
             Xerite
