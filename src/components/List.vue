@@ -1,109 +1,218 @@
 <template>
-  <div class="division">
-      <input type="text" v-model="search"  id="searchList" placeholder="Search...">
-    <table class="table" border="3">
-        <thead id="thead">
-      <tr>
-      <th v-for="head in tableHead" :key="head">
-        {{head}}
-      </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr v-for="j in filterCustomer" :key="j.id">
-        <td>
-            <router-link :to="'sifarishi_tamamla/'+j.id">
-            {{j.id}}
-            </router-link>
-        </td> 
-        <td>
-          <router-link :to="'sifarishi_tamamla/'+j.id">
-            {{j.name}}
-          </router-link>
-        </td>
-        <td>
-          <router-link :to="'sifarishi_tamamla/'+j.id">
-            {{j.username}}
-          </router-link>
-        </td>
-        <td>
-            <router-link :to="'sifarishi_tamamla/'+j.id">
-            {{j.website}}
-            </router-link>
-        </td>
-        <td>
-            <router-link :to="'sifarishi_tamamla/'+j.id">
-            {{j.address.street}}
-            </router-link>
-        </td>
+  <div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">No</th>
+									<th class="cell100 column2">Ad</th>
+									<th class="cell100 column3">Soyad</th>
+									<th class="cell100 column4">Sifaris</th>
+									<th class="cell100 column5">Telefon</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
 
-      </tr>
-      </tbody>
-    </table>
-  
-  </div>
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								<tr class="row100 body" v-for="data in datas" :key="data.id">
+									<td class="cell100 column1"> {{data.id}} </td>
+									<td class="cell100 column2"> <router-link :to="'/sifarishi_tamamla/'+data.id"> {{data.ad}} </router-link> </td>
+									<td class="cell100 column3"> {{data.soyad}} </td>
+									<td class="cell100 column4"> {{data.phone_number}} </td>
+									<td class="cell100 column5"> {{data.email}} </td>
+								</tr>
+                
+                         
+							</tbody>
+						</table>
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
 </template>
 
 <script>
+
 export default {
     data() {
       return {
-        tableHead:["No:","Ad","Soyad","Sifarish","Location"],
+        tableHead:["No:","Ad","Soyad","Sifarish"],
         datas: [],
         search:''
       }
     },
     created (){
-        fetch('https://jsonplaceholder.typicode.com/users')
+
+      const api = localStorage.getItem("JWT");
+      const token = 'Bearer ' + api
+
+      console.log('==================',localStorage.getItem("JWT"))
+        fetch('http://127.0.0.1:8000/customer/',{
+          headers:{
+            'Authorization': token 
+          }
+        })
         .then(response => response.json())
         .then(data => {
             for (let index = 0; index < data.length; index++) {
-                this.datas = data
-                // console.log(data)
-                
+                this.datas = data                
             }
         })
-    },
-    computed:{
-        filterCustomer:function(){
-            return this.datas.filter((customer)=>{
-                return customer.name.match(this.search)
-            })
-        }
     }
 }
 </script>
 
 <style scoped>
-.division{
-
-  text-align: center;
-  
+.js-pscroll {
+  overflow: hidden;
 }
 
-tr:nth-child(even){
-  background:  #4b4276 !important
+.table100 .ps__rail-y {
+  width: 9px;
+  background-color: transparent;
+  opacity: 1 !important;
+  right: 5px;
+}
+
+.table100 .ps__rail-y::before {
+  content: "";
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  width: 100%;
+  height: calc(100% - 30px);
+  left: 0;
+  top: 15px;
+}
+
+.table100 .ps__rail-y .ps__thumb-y {
+  width: 100%;
+  right: 0;
+  background-color: transparent;
+  opacity: 1 !important;
+}
+
+.table100 .ps__rail-y .ps__thumb-y::before {
+  content: "";
+  display: block;
+  background-color: #cccccc;
+  border-radius: 5px;
+  width: 100%;
+  height: calc(100% - 30px);
+  left: 0;
+  top: 15px;
 }
 
 
-  .searchBar{
-    width: 90%;
-  }
+.limiter {
+  width: 1366px;
+  margin: 0 auto;
+ 
+}
 
-  td{
-      text-align: center;
-  }
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
 
-  #searchList{
-      width: 70%;
-  }
+.wrap-table100 {
+  width: 1170px;
+}
+.table100 {
+  background-color: #fff;
+}
 
-  #thead{
-      background-color: #4b4276 !important;
-    
+table {
+  width: 100%;
+}
 
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.column1 {
+  width: 5%;
+  padding-left: 40px;
+}
+
+.column2 {
+  width: 14%;
+}
+
+.column3 {
+  width: 15%;
+}
+
+.column4 {
+  width: 19%;
+}
+
+.column5 {
+  width: 13%;
+}
+
+.table100-head th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.table100-body td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.table100 {
+  padding-top: 60px;
+}
+
+.table100-head {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.table100-body {
+  max-height: 585px;
+  overflow: auto;
 }
 
 
+.table100.ver1 th {
+  font-family: Lato-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+  background-color:#4882da;
+}
+
+.table100.ver1 td {
+  font-family: Lato-Regular;
+  font-size: 15px;
+  color: #616060;
+  line-height: 1.4;
+}
+
+.table100.ver1 .table100-body tr:nth-child(even) {
+  background-color: #f8f6ff;
+}
   
 </style>

@@ -37,7 +37,7 @@ import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
 import Xerite from './components/Xerite.vue'
 import Login from './components/Login.vue'
-import Register from './components/Register.vue'
+
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -55,8 +55,7 @@ const router = new VueRouter({
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     {path:'/xerite',component:Xerite},
     
-    {path:'/login', component:Login},
-    {path:'/register', component:Register}
+    {path:'/login', component:Login}
   ],
   mode:'history'
 })
