@@ -41,7 +41,8 @@ export default {
             email: "",
             password:"",
             access:"",
-            refresh:""
+            refresh:"",
+            loggedIn: false
         }
     },
     methods:{
@@ -65,8 +66,13 @@ export default {
                 this.access = data.access
                 localStorage.setItem("JWT", data.access);
                 console.log('succes ==> ', data);
-
-                this.$router.push('header');
+                if(data.access){
+                    this.loggedIn = true
+                    localStorage.setItem('logged_in',this.loggedIn)
+                    if(this.loggedIn == true){
+                        this.$router.replace({name:'header'})
+                    }    
+                }
             })
             .catch((error) =>{
                 console.log('error ==>', error);

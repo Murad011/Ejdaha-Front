@@ -67,11 +67,11 @@ export default {
   
   created(){
 
-        fetch('https://jsonplaceholder.typicode.com/users/'+this.id)
+        fetch('https://127.0.0.1/customer/'+this.id)
         .then(response => response.json())
         .then(data => {
           this.customer = data
-          console.log(data.address.city)
+            console.log(data)
           })
   },
   

@@ -9,7 +9,7 @@
             <li><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
         </ul> 
         <div class="social_media">
-          <router-link to="login"><i class="fas fa-sign-out-alt"></i></router-link>
+          <router-link to="login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>
           
       </div>
     </div>
@@ -23,7 +23,20 @@
      
 export default {
   name: 'Navbar',
-  
+  data(){
+        loggedOut:false    
+    }
+  methods:{
+        logOut(){
+            localStorage.setItem('logged_in', this.loggedOut)
+             
+            localStorage.removeItem('JWT')
+            this.loggedOut = true
+            if(this.loggedOut == true){
+                this.$router.replace({name:'login'})
+            }
+        }
+    } 
 }
 </script>
 
