@@ -45,7 +45,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5%;
+    margin: 1.4%;
 }
 
 .image1{

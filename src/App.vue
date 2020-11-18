@@ -30,18 +30,3 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Commissioner', sans-serif;
-  display: flex;
-
-}
-
-#nav{
-  flex: 1;
-}
-
-#nav+#rota{
-  flex: 7;
-}
-</style>
