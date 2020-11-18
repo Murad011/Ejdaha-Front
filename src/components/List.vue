@@ -119,7 +119,7 @@ export default {
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 20vh;
   background: #fff;
   border-radius: 10px;
   display: -webkit-box;
@@ -134,7 +134,7 @@ export default {
 }
 
 .wrap-table100 {
-  width: 1170px;
+  width: 1300px;
 }
 .table100 {
   background-color: #fff;

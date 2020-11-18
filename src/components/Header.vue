@@ -22,7 +22,7 @@
 </div>
 <div class="container">
    <Map/>
-    <p class="flial">Fliallarimiz <i class="far fa-copyright"></i></p>
+    <p class="filial">Fliallarimiz <i class="far fa-copyright"></i></p>
 </div>    
 </div>
   
@@ -69,8 +69,9 @@ export default {
 
 
 
-.flial{
+.filial{
    font-family: 'Raleway', sans-serif;
+   
 }
 
 .card {
