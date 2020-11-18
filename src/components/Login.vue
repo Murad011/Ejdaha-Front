@@ -5,9 +5,9 @@
     <p class="h4 mb-4">Log in</p>
 
   
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <input v-model="email" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+    <input v-model="password" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
     <div class="d-flex justify-content-around">
         <div>
@@ -19,7 +19,7 @@
         </div>
         
     </div>
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+    <button @click="logIn" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
 
     <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
     <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>

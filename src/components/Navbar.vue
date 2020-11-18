@@ -4,9 +4,9 @@
     <div class="sidebar">
        <h2 class="ejdaha">Ejdaha Delivery</h2>
         <ul>
-            <li><router-link to="/"><i class="fas fa-home"></i>Home</router-link></li>
-            <li><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
-            <li><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
+            <li v-show="visible"><router-link to="/ana_sehife"><i class="fas fa-home"></i>Home</router-link></li>
+            <li v-show="visible"><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
+            <li v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
         </ul> 
         <div class="social_media">
           <router-link to="login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>
@@ -24,16 +24,28 @@
 export default {
   name: 'Navbar',
   data(){
-        loggedOut:false    
+    return{
+      visible:true,
+      loggedOut:false
+      }
+
+          
+    },
+  created(){
+    var user = localStorage.getItem('logged_in')
+    if(user == false){
+      this.visible = false
     }
+  },
   methods:{
+
         logOut(){
             localStorage.setItem('logged_in', this.loggedOut)
-             
             localStorage.removeItem('JWT')
             this.loggedOut = true
             if(this.loggedOut == true){
                 this.$router.replace({name:'login'})
+                this.visible = false
             }
         }
     } 

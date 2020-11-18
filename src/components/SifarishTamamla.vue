@@ -11,10 +11,10 @@
           </tr>
           <tr>
              <td> {{customer.id}} </td>
-             <td> {{customer.name}} </td>
-             <td> {{customer.username}} </td>
-             <td>{{customer.website}}</td>
-             <td> {{customer.address.city}} </td> 
+             <td> {{customer.ad}} </td>
+             <td> {{customer.soyad}} </td>
+             <td>{{customer.phone_number}}</td>
+             <td> {{customer.email}} </td> 
           </tr>
       </table>
       </div>
@@ -66,8 +66,14 @@ export default {
     }},
   
   created(){
-
-        fetch('https://127.0.0.1/customer/'+this.id)
+        const api = localStorage.getItem("JWT");
+        const token = 'Bearer ' + api
+        fetch('https://127.0.0.1/customer/'+this.id + '/' ,{
+          method: 'GET',
+          headers:{
+            'Authorization': token 
+          }
+        })
         .then(response => response.json())
         .then(data => {
           this.customer = data

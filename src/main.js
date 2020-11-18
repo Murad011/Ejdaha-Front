@@ -56,25 +56,25 @@ const router = new VueRouter({
     {path: '/', redirect:{
       name: 'login'
     } },
-    {path:'/ana_sehife', component:Header, name:'header', beforeEnter: (to,from,next) => {
+    {path:'/ana_sehife', component:Header, name:'header', beforeEach: (to,from,next) => {
       if(user == false){
         next('/login')
       }else{
         next()
       }}},
-    {path: '/staticties', component: MonthStaticties, beforeEnter: (to,from,next) => {
+    {path: '/staticties', component: MonthStaticties, beforeEach: (to,from,next) => {
       if(user == false){
         next('/login')
       }else{
         next()
       }}},
-    {path:'/sifarishler_siyahisi', component:List, beforeEnter: (to,from,next) => {
+    {path:'/sifarishler_siyahisi', component:List, beforeEach: (to,from,next) => {
       if(user == false){
         next('/login')
       }else{
         next()
       }}},
-    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla,  beforeEnter: (to,from,next) => {
+    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla,  beforeEach: (to,from,next) => {
       if(user == false){
         next('/login')
       }else{
@@ -83,7 +83,7 @@ const router = new VueRouter({
     {path:'/xerite',component:Xerite},
     {path:'/login', component:Login, name: 'login'},
     
-    {path:'/preview', component:Preview, beforeEnter: (to,from,next) => {
+    {path:'/preview', component:Preview, beforeEach: (to,from,next) => {
       if(user == false){
         next('/login')
       }else{

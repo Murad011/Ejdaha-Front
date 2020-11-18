@@ -10,8 +10,8 @@
 									<th class="cell100 column1">No</th>
 									<th class="cell100 column2">Ad</th>
 									<th class="cell100 column3">Soyad</th>
-									<th class="cell100 column4">Sifaris</th>
-									<th class="cell100 column5">Telefon</th>
+									<th class="cell100 column4">Telefon</th>
+									<th class="cell100 column5">Email</th>
 								</tr>
 							</thead>
 						</table>
@@ -53,7 +53,7 @@ export default {
       const api = localStorage.getItem("JWT");
       const token = 'Bearer ' + api
 
-      console.log('==================',localStorage.getItem("JWT"))
+      
         fetch('http://127.0.0.1:8000/customer/',{
           headers:{
             'Authorization': token 
