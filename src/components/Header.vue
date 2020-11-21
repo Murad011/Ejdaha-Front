@@ -35,6 +35,12 @@ export default {
     components: {
         Map
        
+    },
+    beforeCreate(){
+        const user = localStorage.getItem('logged_in')
+        if(user !== true){
+            this.$router.replace({name:'login'})
+        }
     }
 }
 </script>

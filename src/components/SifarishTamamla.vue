@@ -64,11 +64,22 @@ export default {
       table_head:['No','Ad',"Soyad",'Sifarish','Location'],
       search: ''
     }},
+
+    beforeCreate(){
+        const user = localStorage.getItem('logged_in')
+        if(user !== true){
+            this.$router.replace({name:'login'})
+        }
+    },
   
   created(){
+
+        
+  
+
         const api = localStorage.getItem("JWT");
         const token = 'Bearer ' + api
-        fetch('https://127.0.0.1/customer/'+this.id + '/' ,{
+        fetch('http://127.0.0.1:8000/customer/'+this.id ,{
           method: 'GET',
           headers:{
             'Authorization': token 

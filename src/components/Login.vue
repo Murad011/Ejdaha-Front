@@ -65,6 +65,7 @@ export default {
                 this.refresh = data.refresh
                 this.access = data.access
                 localStorage.setItem("JWT", data.access);
+                localStorage.setItem("refresh", data.refresh)
                 console.log('succes ==> ', data);
                 if(data.access){
                     this.loggedIn = true

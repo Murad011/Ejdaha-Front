@@ -24,6 +24,12 @@ export default {
             tableHead:['No','Musterinin adi','Musterinin soyadi','Musterinin sifarisi','Musterinin telefon nomresi','Kuryerin adi','Kuryerin soyadi','Kuryerin telefon nomresi','Location','Km','Saat'],
             tableData:['1','Osman','Mamedov','2doner 1ayran','055 555 55 55','Fuad','Aliyev','055 666 66 66','M.Ecemi mst.','2','23deq']
         }
+    },
+    beforeCreate(){
+        const user = localStorage.getItem('logged_in')
+        if(user !== true){
+            this.$router.replace({name:'login'})
+        }
     }
 }
 </script>

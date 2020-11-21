@@ -48,7 +48,17 @@ export default {
         search:''
       }
     },
+    beforeCreate(){
+        const user = localStorage.getItem('logged_in')
+        if(user !== true){
+            this.$router.replace({name:'login'})
+        }
+    },
     created (){
+
+     
+        
+    
 
       const api = localStorage.getItem("JWT");
       const token = 'Bearer ' + api

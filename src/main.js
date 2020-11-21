@@ -48,47 +48,20 @@ Vue.use(VueGoogleMaps, {
 
 })
 
-const user = localStorage.getItem('logged_in')
-
 
 const router = new VueRouter({
   routes: [
     {path: '/', redirect:{
       name: 'login'
     } },
-    {path:'/ana_sehife', component:Header, name:'header', beforeEach: (to,from,next) => {
-      if(user == false){
-        next('/login')
-      }else{
-        next()
-      }}},
-    {path: '/staticties', component: MonthStaticties, beforeEach: (to,from,next) => {
-      if(user == false){
-        next('/login')
-      }else{
-        next()
-      }}},
-    {path:'/sifarishler_siyahisi', component:List, beforeEach: (to,from,next) => {
-      if(user == false){
-        next('/login')
-      }else{
-        next()
-      }}},
-    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla,  beforeEach: (to,from,next) => {
-      if(user == false){
-        next('/login')
-      }else{
-        next()
-      }}},
+    {path:'/ana_sehife', component:Header, name:'header'},
+    {path: '/staticties', component: MonthStaticties},
+    {path:'/sifarishler_siyahisi', component:List},
+    {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     {path:'/xerite',component:Xerite},
     {path:'/login', component:Login, name: 'login'},
     
-    {path:'/preview', component:Preview, beforeEach: (to,from,next) => {
-      if(user == false){
-        next('/login')
-      }else{
-        next()
-      }}}
+    {path:'/preview', component:Preview}
   ],
   mode:'history'
 })

@@ -32,16 +32,17 @@ export default {
           
     },
   created(){
-    var user = localStorage.getItem('logged_in')
-    if(user == false){
+    const user = localStorage.getItem('logged_in')
+    if(user !== true){
       this.visible = false
     }
   },
   methods:{
 
         logOut(){
-            localStorage.setItem('logged_in', this.loggedOut)
-            localStorage.removeItem('JWT')
+          localStorage.removeItem("JWT")
+          
+            localStorage.setItem('logged_in', false)
             this.loggedOut = true
             if(this.loggedOut == true){
                 this.$router.replace({name:'login'})
