@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label>
+    <label class="w-100">
       AutoComplete
       <GmapAutocomplete @place_changed="setPlace">
       </GmapAutocomplete>
@@ -8,7 +8,7 @@
     </label>
     <br/>
 
-    <GmapMap style="width: 600px; height: 300px;" :zoom="1" :center="{lat: 0, lng: 0}">
+    <GmapMap style="width: 1120px; height: 300px;" :zoom="1" :center="{lat: 0, lng: 0}">
       <GmapMarker v-for="(marker, index) in markers"
         :key="index"
         :position="marker.position"
@@ -50,6 +50,7 @@ export default {
           }
         })
         this.place = null;
+        console.log(place)
       }
     }
   }

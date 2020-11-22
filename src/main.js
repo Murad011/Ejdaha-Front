@@ -52,7 +52,7 @@ Vue.use(VueGoogleMaps, {
 const router = new VueRouter({
   routes: [
     {path: '/', redirect:{
-      name: 'login'
+      name: 'header'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
     {path: '/staticties', component: MonthStaticties},
@@ -61,7 +61,7 @@ const router = new VueRouter({
     {path:'/xerite',component:Xerite},
     {path:'/login', component:Login, name: 'login'},
     
-    {path:'/preview', component:Preview}
+    {path:'/preview/:id', component:Preview}
   ],
   mode:'history'
 })

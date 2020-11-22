@@ -6,12 +6,16 @@
 					<div class="table100-head">
 						<table>
 							<thead>
-								<tr class="row100 head">
+								<tr class="row100 head" >
 									<th class="cell100 column1">No</th>
 									<th class="cell100 column2">Ad</th>
 									<th class="cell100 column3">Soyad</th>
 									<th class="cell100 column4">Telefon</th>
 									<th class="cell100 column5">Email</th>
+                  <th class="cell100 column5">sifaris</th>
+                  <th class="cell100 column5">location</th>
+                  <th class="cell100 column5">total</th>
+
 								</tr>
 							</thead>
 						</table>
@@ -26,6 +30,9 @@
 									<td class="cell100 column3"> {{data.soyad}} </td>
 									<td class="cell100 column4"> {{data.phone_number}} </td>
 									<td class="cell100 column5"> {{data.email}} </td>
+                  <td> {{data.musterinin_sifarisi}} </td>
+                  <td> {{data.location}} </td>
+                  <td> {{data.total}} </td>
 								</tr>
                 
                          
@@ -43,14 +50,14 @@
 export default {
     data() {
       return {
-        tableHead:["No:","Ad","Soyad","Sifarish"],
+        tableHead:["No:","Ad","Soyad","telefon",'email','sifaris','location','total'],
         datas: [],
         search:''
       }
     },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user !== true){
+        if(user === 'false'){
             this.$router.replace({name:'login'})
         }
     },
@@ -75,7 +82,10 @@ export default {
                 this.datas = data                
             }
         })
+
+        
     }
+
 }
 </script>
 

@@ -33,7 +33,7 @@ export default {
     },
   created(){
     const user = localStorage.getItem('logged_in')
-    if(user !== true){
+    if(user !== 'true'){
       this.visible = false
     }
   },
