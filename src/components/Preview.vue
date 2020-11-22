@@ -27,7 +27,7 @@ export default {
     },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user !== true){
+        if(user === false){
             this.$router.replace({name:'login'})
         }
     }
