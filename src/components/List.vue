@@ -6,12 +6,16 @@
 					<div class="table100-head">
 						<table>
 							<thead>
-								<tr class="row100 head">
+								<tr class="row100 head" >
 									<th class="cell100 column1">No</th>
 									<th class="cell100 column2">Ad</th>
 									<th class="cell100 column3">Soyad</th>
 									<th class="cell100 column4">Telefon</th>
 									<th class="cell100 column5">Email</th>
+                  <th class="cell100 column5">Sifaris</th>
+                  <th class="cell100 column5">Location</th>
+                  <th class="cell100 column5">Total</th>
+
 								</tr>
 							</thead>
 						</table>
@@ -21,11 +25,14 @@
 						<table>
 							<tbody>
 								<tr class="row100 body" v-for="data in datas" :key="data.id">
-									<td class="cell100 column1"> {{data.id}} </td>
-									<td class="cell100 column2"> <router-link :to="'/sifarishi_tamamla/'+data.id"> {{data.ad}} </router-link> </td>
-									<td class="cell100 column3"> {{data.soyad}} </td>
-									<td class="cell100 column4"> {{data.phone_number}} </td>
-									<td class="cell100 column5"> {{data.email}} </td>
+									<td class="cell100 column1">  {{data.id}} </td>
+									<td class="cell100 column2">  <router-link :to="'/sifarishi_tamamla/'+data.id"> {{data.ad}} </router-link> </td>
+									<td class="cell100 column3">  {{data.soyad}} </td>
+									<td class="cell100 column4">  {{data.phone_number}} </td>
+									<td class="cell100 column5">  {{data.email}} </td>
+                  <td>  {{data.musterinin_sifarisi}} </td>
+                  <td>  {{data.location}} </td>
+                  <td>  {{data.total}} </td>
 								</tr>
                 
                          
@@ -43,14 +50,14 @@
 export default {
     data() {
       return {
-        tableHead:["No:","Ad","Soyad","Sifarish"],
+        tableHead:["No:","Ad","Soyad","telefon",'email','sifaris','location','total'],
         datas: [],
         search:''
       }
     },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user === false){
+        if(user === 'false'){
             this.$router.replace({name:'login'})
         }
     },
@@ -75,7 +82,10 @@ export default {
                 this.datas = data                
             }
         })
+
+        
     }
+
 }
 </script>
 
@@ -140,11 +150,11 @@ export default {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 33px 30px;
+  padding: 30px 30px;
 }
 
 .wrap-table100 {
-  width: 1300px;
+  width: 1500px;
 }
 .table100 {
   background-color: #fff;
@@ -156,42 +166,43 @@ table {
 
 th, td {
   font-weight: unset;
-  padding-right: 10px;
+  padding-right: 50px;
 }
 
 .column1 {
   width: 5%;
-  padding-left: 40px;
+  padding-left: 15px;
 }
 
 .column2 {
-  width: 14%;
+  width: 20%;
+  
 }
 
 .column3 {
-  width: 15%;
+  width: 20%;
 }
 
 .column4 {
-  width: 19%;
+  width: 20%;
 }
 
 .column5 {
-  width: 13%;
+  width: 20%;
 }
 
 .table100-head th {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 25px;
+  padding-bottom: 30px;
 }
 
 .table100-body td {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .table100 {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .table100-head {
@@ -201,7 +212,7 @@ th, td {
 }
 
 .table100-body {
-  max-height: 585px;
+  max-height: 580px;
   overflow: auto;
 }
 
@@ -211,7 +222,7 @@ th, td {
   font-size: 18px;
   color: #fff;
   line-height: 1.4;
-  background-color:#4882da;
+  background-color:#081f42;
 }
 
 .table100.ver1 td {

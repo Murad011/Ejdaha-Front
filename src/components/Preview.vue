@@ -1,36 +1,81 @@
 <template>
     <div>
-  <table class="table mt-2" border="5">
-      <tr>
-          <th v-for="data in tableHead" :key="data">
-              {{data}}
-          </th>
-      </tr>
-      <tbody>
+      <mdb-tbl>
+        <mdb-tbl-head color="black" textWhite>
           <tr>
-              <td v-for="data in tableData" :key="data">
+            <th v-for="data in tableHead" :key="data">{{data}}</th>
+           
+          </tr>
+        </mdb-tbl-head>
+        <mdb-tbl-body>
+          <tr>
+            <th>1</th>
+                <td v-for="data in customer" :key="data">
                   {{data}}
               </td>
           </tr>
-      </tbody>
-  </table>
-  <button type="button" class="btn btn-primary btn-lg btn-block my-5">Tesdiq et</button>
-  </div>
+        </mdb-tbl-body>
+      </mdb-tbl>
+
+     <button type="button" id="button" class="btn btn-primary btn-lg btn-block my-5">Tesdiq et</button>
+    </div>
 </template>
 <script>
+import { mdbTbl, mdbTblHead, mdbTblBody } from 'mdbvue';
 export default {
+     name: 'TablePage',
+    components: {
+      mdbTbl,
+      mdbTblHead,
+      mdbTblBody
+    },
     data(){
         return{
+            id: this.$route.params.id,
             tableHead:['No','Musterinin adi','Musterinin soyadi','Musterinin sifarisi','Musterinin telefon nomresi','Kuryerin adi','Kuryerin soyadi','Kuryerin telefon nomresi','Location','Km','Saat'],
-            tableData:['1','Osman','Mamedov','2doner 1ayran','055 555 55 55','Fuad','Aliyev','055 666 66 66','M.Ecemi mst.','2','23deq']
+            customer: [],
+            courier: []
+
         }
     },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user === false){
+        if(user === 'false'){
             this.$router.replace({name:'login'})
         }
-    }
+    },
+    created(){
+        const api = localStorage.getItem("JWT");
+        const token = 'Bearer ' + api
+        fetch('http://127.0.0.1:8000/customer/'+this.id+'/' ,{
+          method: 'GET',
+          headers:{
+            'Authorization': token 
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+        this.customer = data})
+
+        fetch('http://127.0.0.1:8000/courier/' ,{
+          method: 'GET',
+          headers:{
+            'Authorization': token
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          for (let index = 0; index < data.length; index++) {
+                if(data[index].is_busy === false){
+                  
+                  this.courier.push(data[index])
+                  console.log(this.courier)
+
+                }              
+            }
+        })
+
+  }
 }
 </script>
 <style scoped>
@@ -45,6 +90,12 @@ div{
     margin-top: 200px;
 }
 .btn-primary{
-    background:#4b4276;
+    background:#00060e;
+}
+
+
+#button{
+  background-color:  #041938;
+
 }
 </style>

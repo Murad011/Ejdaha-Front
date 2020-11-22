@@ -33,7 +33,7 @@ export default {
     },
   created(){
     const user = localStorage.getItem('logged_in')
-    if(user === false){
+    if(user !== 'true'){
       this.visible = false
     }
   },
@@ -84,8 +84,8 @@ body{
 .wrapper .sidebar{
   width: 100%;
   height: 100%;
-  background: #4882da;
-  background: #4882da;
+  background: #0b2752;
+  background: #041c3f;
 
 }
 
@@ -119,8 +119,8 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #4882da;
-  background-color: #4882da;
+  background-color: #041a3a;
+  background-color: #041938;
  
 }
     
@@ -140,8 +140,8 @@ body{
 .wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
-  background:#4882da;
-  background: #4882da;
+  background:#041d42;
+  background: #03193a;
   height: 40px;
   line-height: 45px;
   text-align: center;

@@ -7,46 +7,28 @@
               <table class="font" id="customer">
           
           <tr>
-              <th  v-for="data in table_head" :key="data">{{data}}</th>
+              <th  v-for="data in table_head1" :key="data">{{data}}</th>
           </tr>
           <tr>
              <td> {{customer.id}} </td>
              <td> {{customer.ad}} </td>
              <td> {{customer.soyad}} </td>
-             <td>{{customer.phone_number}}</td>
-             <td> {{customer.email}} </td> 
+             <td> {{customer.phone_number}} </td>
+             <td> {{customer.email}} </td>
+             <td> {{customer.musterinin_sifarisi}} </td>
+             <td> {{customer.location}} </td>
+             <td> {{customer.total}} </td>
           </tr>
       </table>
       </div>
-      <div class="col">
-         <table class="font col" id="courier">
-          <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Surname</th>
-              <th>Adress</th>
-              <th>Price</th>
-          </tr>
-          <tr>
-              <td>1</td>
-              <td>Fabiden</td>
-              <td>LeBlanc</td>
-              <td>Fabiden@gmail.com</td>
-              <td>1500$</td>
-          </tr>           
-      </table>
       </div>
-          </div>
-
       </div>
-      <router-link to="/preview"><button id="submit_button"> Sifarisi Gonder </button></router-link>
-    <div class="search_div">
-      <input type="text" v-model="search"  id="searchList" placeholder="Search...">
-    </div>
     <div class="container">
         <Xerite/>
     </div> 
-      
+    <div class="container my-4">
+      <router-link :to="'/preview/'+customer.id"><button type="button" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button></router-link>
+      </div>
   </div>
 </template>
 
@@ -61,13 +43,15 @@ export default {
     return{
       id: this.$route.params.id,
       customer: {},
-      table_head:['No','Ad',"Soyad",'Sifarish','Location'],
+      courier:{},
+      table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifarish','Location','Total'],
+      table_head2:['Ad',"Soyad",'Telefon'],
       search: ''
     }},
 
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user !== false){
+        if(user === 'false'){
             this.$router.replace({name:'login'})
         }
     },
@@ -79,7 +63,7 @@ export default {
 
         const api = localStorage.getItem("JWT");
         const token = 'Bearer ' + api
-        fetch('http://127.0.0.1:8000/customer/'+this.id ,{
+        fetch('http://127.0.0.1:8000/customer/'+this.id+'/' ,{
           method: 'GET',
           headers:{
             'Authorization': token 
@@ -88,7 +72,7 @@ export default {
         .then(response => response.json())
         .then(data => {
           this.customer = data
-            console.log(data)
+            
           })
   },
   
@@ -101,16 +85,20 @@ export default {
     margin-top: 20px;
 }
 
-
+#button{
+  background-color:  #041938;
+}
 
 #customer {
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
+    background: #04152e;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
-    background:  #4b4276;
+    border: 5px;
     text-align: center;
+    color: white;
     
     
     
@@ -122,7 +110,7 @@ export default {
     border-spacing: 0;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
-    background:  #4b4276;
+    
     text-align: center;
     
 }
@@ -137,16 +125,7 @@ th,td {
 }
 
 
-#submit_button{
-    position: absolute;
-    top: 75px;
-    right: 20px;
-    border-radius: 50%;
-    border: 1px solid  #4b4276 !important;
-    background-color: #4b4276 !important;
-    padding: 20px;
-    color: white;
- }
+
 
 .search_div{
     text-align: center;

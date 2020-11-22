@@ -91,8 +91,8 @@ export default {
 
 
 .btn-info{
-  background-color:#4882da !important;
-  background-color: #4882da !important;
+  background-color:#081830 !important;
+  background-color: #22406d !important;
   
 }
 

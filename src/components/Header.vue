@@ -7,13 +7,13 @@
         <b class="font text-white"> 10 </b>
     </div>
 
-    <div class="card">
+    <div class="card bg-danger">
         <img class="image2" src="./image/busycourier.png" alt="">
        <em class="font text-white"> Total Busy Couriers </em>
        <b class="font text-white"> 10 </b>
     </div>
 
-    <div class="card">
+    <div class="card bg-success">
        <img class="image3" src="./image/packages.png" alt="">
        <em class="font text-white"> Total Delivery Packages </em>
        <b class="font text-white">10 </b>
@@ -38,7 +38,7 @@ export default {
     },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
-        if(user === false){
+        if(user === 'false'){
             this.$router.replace({name:'login'})
         }
     }
@@ -83,7 +83,7 @@ export default {
 .card {
     width: 100%;
     height: 100%;
-    background-color: #4882da ;
+    background-color: #1251b1 ;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.24);
