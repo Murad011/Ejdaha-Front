@@ -3,10 +3,10 @@
 <div class="wrapper">
     <div class="sidebar">
        <h2 class="ejdaha">Ejdaha Delivery</h2>
-        <ul>
-            <li v-show="visible"><router-link to="/ana_sehife"><i class="fas fa-home"></i>Home</router-link></li>
-            <li v-show="visible"><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
-            <li v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
+        <ul class="d-flex justify-content-center">
+            <li class="mx-5" v-show="visible"><router-link to="/ana_sehife"><i class="fas fa-home"></i>Home</router-link></li>
+            <li class="mx-5" v-show="visible"><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
+            <li class="mx-5" v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
         </ul> 
         <div class="social_media">
           <router-link to="login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>
@@ -33,7 +33,7 @@ export default {
     },
   created(){
     const user = localStorage.getItem('logged_in')
-    if(user !== 'true'){
+    if(user == 'false'){
       this.visible = false
     }
   },
@@ -78,7 +78,7 @@ body{
 
 .wrapper{
   display: flex;
-  position: relative;
+  /* position: relative; */
 }
 
 .wrapper .sidebar{
@@ -131,10 +131,10 @@ body{
  
 .wrapper .sidebar .social_media{
   position: absolute;
-  bottom: 85px;
-  left: 97%;
+  top: 16px;
+  right: 10px;
   transform: translateX(-5%);
-  display: flex;
+  
 }
 
 .wrapper .sidebar .social_media a{

@@ -36,11 +36,43 @@ export default {
         Map
        
     },
+    data(){
+        return{
+            free_couriers:"",
+            busy_couriers:""
+        }
+    },
     beforeCreate(){
         const user = localStorage.getItem('logged_in')
         if(user === 'false'){
             this.$router.replace({name:'login'})
         }
+    }, 
+    created(){
+        const api = localStorage.getItem("JWT");
+      const token = 'Bearer ' + api
+
+      
+        fetch('http://127.0.0.1:8000/courier/',{
+          headers:{
+            'Authorization': token 
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+            for (let index = 0; index < data.length; index++) {
+                const element = data[index]
+                const busy = [];
+                const free = [];
+                if (element.is_busy === false) {
+                    free.push(element)
+                    console.log('FREE =>', free) 
+                }else if(element.is_busy === true){
+                    busy.push(element)
+                    console.log('BUSY =>',busy)
+                }
+            }
+        })
     }
 }
 </script>

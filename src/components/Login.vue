@@ -47,7 +47,7 @@ export default {
     },
     methods:{
        async logIn(e){
-            e.preventDefault;
+            e.preventDefault();
             const data = {
                 email: this.email,
                 password: this.password

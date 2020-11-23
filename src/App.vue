@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navbar id="nav" />
+    <Navbar />
     
-    <router-view id="rota"></router-view>
+    <router-view></router-view>
       
      
       
