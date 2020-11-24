@@ -131,7 +131,7 @@ body{
  
 .wrapper .sidebar .social_media{
   position: absolute;
-  top: 16px;
+  top: 10px;
   right: 10px;
   transform: translateX(-5%);
   

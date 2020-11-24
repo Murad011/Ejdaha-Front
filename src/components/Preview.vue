@@ -9,9 +9,15 @@
         </mdb-tbl-head>
         <mdb-tbl-body>
           <tr>
-            <th>1</th>
+            
                 <td v-for="data in customer" :key="data">
                   {{data}}
+              </td>
+              <td>
+                Kenan
+              </td>
+              <td>
+                Huseynov
               </td>
           </tr>
         </mdb-tbl-body>
@@ -32,7 +38,7 @@ export default {
     data(){
         return{
             id: this.$route.params.id,
-            tableHead:['No','Musterinin adi','Musterinin soyadi','Musterinin sifarisi','Musterinin telefon nomresi','Kuryerin adi','Kuryerin soyadi','Kuryerin telefon nomresi','Location','Km','Saat'],
+            tableHead:['No','Musterinin adi','Musterinin soyadi','Musterinin telefon nomresi','Musterinin emaili','Musterinin sifarisi','Location','Total','Kuryerin Adi','Kuryerin Soyadi'],
             customer: [],
             courier: []
 

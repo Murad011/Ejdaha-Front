@@ -16,7 +16,7 @@
   
     <div class="col text-center">
     <p class="w-60 text-center">Courier staticties</p>
-      <CouirerStaticties />
+     
     </div>
     </div>
 
@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import CouirerStaticties from './CouirerStaticties.vue'
+
 import { mdbLineChart } from "mdbvue";
 export default {
     name: "ChartPage",
     components: {
       mdbLineChart,
       
-      CouirerStaticties
+    
     },
     data() {
       return {
