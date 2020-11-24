@@ -3,19 +3,19 @@
         <div class="card_div">
     <div class="card">
         <img class="image1" src="./image/freecourier.png" alt="">
-        <em class="font text-white"> Total Free Couriers</em>
+        <em class="font text-white"> Ərazidə Olmayan Kuryer </em>
         <b class="font text-white"> 10 </b>
     </div>
 
     <div class="card bg-danger">
         <img class="image2" src="./image/busycourier.png" alt="">
-       <em class="font text-white"> Total Busy Couriers </em>
+       <em class="font text-white"> Ərazidə Olan Kuryer </em>
        <b class="font text-white"> 10 </b>
     </div>
 
     <div class="card bg-success">
        <img class="image3" src="./image/packages.png" alt="">
-       <em class="font text-white"> Total Delivery Packages </em>
+       <em class="font text-white"> Sifariş Paketləri </em>
        <b class="font text-white">10 </b>
     </div>
 

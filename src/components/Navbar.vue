@@ -2,11 +2,11 @@
 
 <div class="wrapper">
     <div class="sidebar">
-       <h2 class="ejdaha">Ejdaha Delivery</h2>
+       <h2 class="ejdaha">Delivery Module</h2>
         <ul class="d-flex justify-content-center">
-            <li class="mx-5" v-show="visible"><router-link to="/ana_sehife"><i class="fas fa-home"></i>Home</router-link></li>
+            <li class="mx-5" v-show="visible"><router-link to="/ana_sehife"><i class="fas fa-home"></i>Ana Səhifə</router-link></li>
             <li class="mx-5" v-show="visible"><router-link to="/staticties"> <i class="fas fa-user"></i>Statistika</router-link> </li>
-            <li class="mx-5" v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarisler Siyahisi</router-link> </li>
+            <li class="mx-5" v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarişlər Siyahısı</router-link> </li>
         </ul> 
         <div class="social_media">
           <router-link to="login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>

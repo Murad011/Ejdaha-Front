@@ -32,7 +32,7 @@ Vue.use(IconsPlugin)
 
 
 import Header from './components/Header.vue'
-import MonthStaticties from './components/MonthStaticties.vue'
+import Statistika from './components/Statistika.vue'
 import List from "./components/List.vue"
 import Preview from './components/Preview.vue'
 import SifarishTamamla from './components/SifarishTamamla.vue'
@@ -55,7 +55,7 @@ const router = new VueRouter({
       name: 'header'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
-    {path: '/staticties', component: MonthStaticties},
+    {path: '/staticties', component: Statistika},
     {path:'/sifarishler_siyahisi', component:List},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     {path:'/xerite',component:Xerite},

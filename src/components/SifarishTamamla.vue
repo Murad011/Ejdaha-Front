@@ -27,7 +27,7 @@
         <Xerite/>
     </div> 
     <div class="container my-4">
-      <router-link :to="'/preview/'+customer.id"><button type="button" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button></router-link>
+      <router-link :to="'/preview/'+customer.id"><button type="button" id="button" class="btn btn-primary btn-lg btn-block">Təsdiq et</button></router-link>
       </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
       id: this.$route.params.id,
       customer: {},
       courier:{},
-      table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifarish','Location','Total'],
+      table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifariş','Location','Total'],
       table_head2:['Ad',"Soyad",'Telefon'],
       search: ''
     }},

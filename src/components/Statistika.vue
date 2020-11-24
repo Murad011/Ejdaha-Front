@@ -2,15 +2,8 @@
   <div class="d-flex flex-column justify-content-center align-items-center" style="height: 80vh">
     <div class="p-2">
       <h1 >Enter to predict Loyal Custom</h1>
-      <h1 class="bg-primary text-center text-white "  style="font-size:2rem">{{APIResult}}</h1>
+      <h1 class="xett"  style="font-size:2rem">{{APIResult}}</h1>
     </div>
-<<<<<<< HEAD
-    
-  
-    <div class="col text-center">
-    <p class="w-60 text-center">Courier staticties</p>
-     
-=======
     <div class="p-2">
       <form @submit.prevent>
         <div class="form-row" style="max-width:500px">
@@ -86,89 +79,15 @@
               id="RFMScore"
             />
           </div>
-          <button @click="predict" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+          <button @click="predict" type="button" id="tesdiq" class="btn btn-primary btn-lg btn-block">Təsdiq Et</button>
         </div>
       </form>
->>>>>>> 92e7ae83f8433951177a5905324e2bd2bf6f6917
     </div>
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-
-import { mdbLineChart } from "mdbvue";
-export default {
-    name: "ChartPage",
-    components: {
-      mdbLineChart,
-      
-    
-    },
-    data() {
-      return {
-        lineChartData: {
-          labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July"
-          ],
-          datasets: [
-            {
-              label: "My First dataset",
-              backgroundColor: "rgba(255, 99, 132, 0.1)",
-              borderColor: "rgba(255, 99, 132, 1)",
-              borderWidth: 0.7,
-              data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-              label: "My Second dataset",
-              backgroundColor: "rgba(151,187,205,0.2)",
-              borderColor: "rgba(151,187,205,1)",
-              borderWidth: 0.8,
-              data: [28, 48, 40, 19, 86, 27, 90]
-            }
-          ]
-        },
-        lineChartOptions: {
-          responsive: false,
-          maintainAspectRatio: false,
-          scales: {
-            xAxes: [
-              {
-                gridLines: {
-                  display: true,
-                  color: "rgba(0, 0, 0, 0.1)"
-                }
-              }
-            ],
-            yAxes: [
-              {
-                gridLines: {
-                  display: true,
-                  color: "rgba(0, 0, 0, 0.1)"
-                }
-              }
-            ]
-          }
-        }
-      };
-    },
-    beforeCreate(){
-        const user = localStorage.getItem('logged_in')
-        if(user === 'false'){
-            this.$router.replace({name:'login'})
-        }
-    }
-  };
-</script>
-=======
 import { getAPI } from "@/axios";
->>>>>>> 92e7ae83f8433951177a5905324e2bd2bf6f6917
 
 export default {
   name: "Posts",
@@ -221,5 +140,15 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
 };
 </script>
 
-<style>
+<style scoped>
+.xett{
+  background-color: #041c3f;
+}
+
+#tesdiq{
+  background-color: #041c3f;
+}
+
+
+
 </style>

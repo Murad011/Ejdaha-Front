@@ -12,9 +12,9 @@
 									<th class="cell100 column3">Soyad</th>
 									<th class="cell100 column4">Telefon</th>
 									<th class="cell100 column5">Email</th>
-                  <th class="cell100 column5">Sifaris</th>
-                  <th class="cell100 column5">Location</th>
-                  <th class="cell100 column5">Total</th>
+                  <th class="cell100 column5">Sifariş</th>
+                  <th class="cell100 column5">Adress</th>
+                  <th class="cell100 column5">Qiymət</th>
 
 								</tr>
 							</thead>
