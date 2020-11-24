@@ -51,7 +51,7 @@ Vue.use(VueGoogleMaps, {
 const router = new VueRouter({
   routes: [
     {path: '/', redirect:{
-      name: 'header'
+      name: 'login'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
     {path: '/staticties', component: Statistika},
