@@ -21,7 +21,7 @@
 
 </div>
 <div class="container">
-   <Map/>
+   <Map1/>
     <p class="filial">Fliallarimiz <i class="far fa-copyright"></i></p>
 </div>    
 </div>
@@ -30,10 +30,10 @@
 
 <script>
 
-import Map from './Map.vue'
+import Map1 from './Map1.vue'
 export default {
     components: {
-        Map
+        Map1
        
     },
     data(){
@@ -62,6 +62,7 @@ export default {
         .then(data => {
             for (let index = 0; index < data.length; index++) {
                 const element = data[index]
+                console.log('ELEMENT =>', element)
                 const busy = [];
                 const free = [];
                 if (element.is_busy === false) {
