@@ -23,7 +23,6 @@ Icon.Default.mergeOptions({
 
 
 
-
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -36,7 +35,7 @@ import Statistika from './components/Statistika.vue'
 import List from "./components/List.vue"
 import Preview from './components/Preview.vue'
 import SifarishTamamla from './components/SifarishTamamla.vue'
-import Xerite from './components/Xerite.vue'
+
 import Login from './components/Login.vue'
 
 
@@ -58,7 +57,7 @@ const router = new VueRouter({
     {path: '/staticties', component: Statistika},
     {path:'/sifarishler_siyahisi', component:List},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
-    {path:'/xerite',component:Xerite},
+    
     {path:'/login', component:Login, name: 'login'},
     
     {path:'/preview/:id', component:Preview}
@@ -68,5 +67,5 @@ const router = new VueRouter({
 
 new Vue({
   render: h => h(App),
-  router
+  router,
 }).$mount('#app')

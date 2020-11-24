@@ -1,58 +1,54 @@
 <template>
-<div class = "row map">
+  <div id="map" class="row map">
     <l-map :zoom="zoom" :center="center">
       <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-      <l-marker :lat-lng="marker"></l-marker>
-        <l-marker :lat-lng="markers"></l-marker>
-         <l-marker :lat-lng="markerd"></l-marker>
-          <l-marker :lat-lng="markerb"></l-marker>
-          <l-marker :lat-lng="markerg"></l-marker>
-          <l-marker :lat-lng="markerl"></l-marker>
-          <l-marker :lat-lng="markerz"></l-marker>
-          <l-marker :lat-lng="markerx"></l-marker>
+      <v-geosearch :options="geosearchOptions" ></v-geosearch>
+      <l-marker :lat-lng="marker">
+        <l-icon :icon-size="iconSize" :icon-url="icon"></l-icon>
+      </l-marker>
     </l-map>
-   
-</div>
-
+  </div>
 </template>
 
-
 <script>
-    import L from 'leaflet';
-    import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
-    export default{
-        name: "Map",
-        data: function(){
-            return{
-                 zoom:10,
-                center: L.latLng(40.409264, 49.867092),
-                url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-                attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-                marker: L.latLng(40.409264, 49.867092),
-                markers:L.latLng(40.58972, 49.66861),
-                 markerd:L.latLng(40.4444, 49.80566),
-                  markerb:L.latLng(40.44808, 49.75502),
-                  markerg: L.latLng(40.3256, 49.73376),
-                  markerl:L.latLng(40.3256, 49.73376),
-                  markerz:L.latLng(40.39667, 49.97361),
-                  markerx:L.latLng(40.51903, 50.11438)
-               
-            }
-        },
-        components: {
-        LMap,
-        LTileLayer,
-        LMarker,
-        }
-       
+import {LMap, LTileLayer, LMarker, LIcon } from 'vue2-leaflet';
+import  L  from "leaflet";
+
+import ejdaha from "../assets/ejdaha.png";
+import { OpenStreetMapProvider } from 'leaflet-geosearch';
+import VGeosearch from 'vue2-leaflet-geosearch';
+
+export default {
+  name: 'Map',
+  components:{
+    LMap,
+    LTileLayer,
+    LMarker,
+    LIcon,
+    VGeosearch
+  },
+  data() {
+    return {
+      zoom:11,
+      center: L.latLng(	40.409264, 49.867092),
+      url:'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6393a20c829a4d0ea029ca49c48cf3a2',
+      attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      marker: L.latLng(40.409264, 49.867092),
+      icon: ejdaha,
+      iconSize:[45,45],
+      geosearchOptions: {
+        provider: new OpenStreetMapProvider(),
+      },
+      
     }
+  },
+  
+}
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.map{
-    height: 55vh;
-    
-    
-}
-
+  .map {
+    height: 95vh;
+  }
 </style>

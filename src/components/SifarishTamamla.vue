@@ -24,7 +24,7 @@
       </div>
       </div>
     <div class="container">
-        <Xerite/>
+        <Map/>
     </div> 
     <div class="container my-4">
       <router-link :to="'/preview/'+customer.id"><button type="button" id="button" class="btn btn-primary btn-lg btn-block">Təsdiq et</button></router-link>
@@ -33,10 +33,10 @@
 </template>
 
 <script>
-import Xerite from './Xerite.vue'
+import Map from './Map.vue'
 export default {  
         components: {
-            Xerite
+            Map
            
         },
   data(){
