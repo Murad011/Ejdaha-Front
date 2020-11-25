@@ -135,3 +135,10 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
 };
 </script>
 
+
+<style scoped>
+.btn-primary{
+  background-color: #041c3f;
+}
+
+</style>

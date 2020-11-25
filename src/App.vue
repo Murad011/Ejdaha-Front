@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <Navbar />
-    
     <router-view></router-view>
-      
-     <notifications group="foo" />
+    <notifications group="foo" />
       
       
    
@@ -13,9 +11,6 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
-
-
-
 export default {
   name: 'App',
   components: {
@@ -23,10 +18,6 @@ export default {
   
   }
    
-    
-    
-  
-
 }
 </script>
 

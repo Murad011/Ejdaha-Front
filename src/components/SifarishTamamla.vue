@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <table class="font" id="courier">
+            <table class="font bg-danger" id="courier">
               <tr>
                 <th  v-for="data in table_head2" :key="data">{{data}}</th>
               </tr>
@@ -44,7 +44,7 @@
         
     </div> 
     <div class="container my-4">
-      <button type="button" @click="gonder" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button>
+      <button type="button" @click="gonder" id="button" class="btn btn-primary btn-lg btn-block bg-success">Tesdiq et</button>
       </div>
       
   </div>
@@ -206,7 +206,7 @@ export default {
     height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
-    background: #04152e;
+    background-color: #1251b1;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
     border: 5px;

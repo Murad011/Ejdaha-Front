@@ -75,7 +75,6 @@ body {
 
 .wrapper {
   display: flex;
-  /* position: relative; */
 }
 
 .wrapper .sidebar {

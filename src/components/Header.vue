@@ -3,19 +3,19 @@
     <div class="card_div">
       <div class="card">
         <img class="image1" src="./image/freecourier.png" alt="" />
-        <em class="font text-white"> Total Free Couriers</em>
+       <em class="font text-white" id="free">Ərazidə Olan Kuryerlər</em>
         <b class="font text-white"> {{ free_couriers }} </b>
       </div>
 
       <div class="card bg-danger">
         <img class="image2" src="./image/busycourier.png" alt="" />
-        <em class="font text-white"> Total Busy Couriers </em>
+        <em class="font text-white" id="busy">Ərazidə Olmayan Kuryerlər </em>
         <b class="font text-white"> {{ busy_couriers }} </b>
       </div>
 
       <div class="card bg-success">
         <img class="image3" src="./image/packages.png" alt="" />
-        <em class="font text-white"> Total Delivery Packages </em>
+        <em class="font text-white" id="packages"> Sifariş Paketləri </em>
         <b class="font text-white"> {{ delivery_packages }} </b>
       </div>
     </div>
@@ -27,10 +27,12 @@
 </template>
 
 <script>
+
 import Map1 from "./Map1.vue";
 export default {
   components: {
     Map1,
+  
   },
   data() {
     return {
@@ -88,6 +90,8 @@ export default {
   align-items: center;
   margin: 1.4%;
 }
+
+
 
 .image1 {
   margin: 0 auto;

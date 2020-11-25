@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <form class="text-center border border-light p-5" action="#!">
+    <form class="text-center p-5" action="#!">
       <p class="h4 mb-4">Log in</p>
 
       <input
@@ -106,5 +106,13 @@ export default {
 .btn-info {
   background-color: #081830 !important;
   background-color: #22406d !important;
+}
+
+.text-center{
+  border: 2px solid  #081830;
+  border-radius: 50px;
+  width: 50%;
+  margin: auto;
+  
 }
 </style>

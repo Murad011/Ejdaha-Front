@@ -35,7 +35,6 @@ import Header from './components/Header.vue'
 import Statistika from './components/Statistika.vue'
 import List from "./components/List.vue"
 import SifarishTamamla from './components/SifarishTamamla.vue'
-
 import Login from './components/Login.vue'
 
 
@@ -57,9 +56,8 @@ const router = new VueRouter({
     {path: '/staticties', component: Statistika},
     {path:'/sifarishler_siyahisi', component:List, name:'sifarisler'},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
-    
     {path:'/login', component:Login, name: 'login'},
-    
+     
   ],
   mode:'history'
 })
