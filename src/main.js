@@ -54,8 +54,8 @@ const router = new VueRouter({
       name: 'login'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
-    {path: '/staticties', component: Statistika},
-    {path:'/sifarishler_siyahisi', component:List},
+    {path: '/staticties', component: MonthStaticties},
+    {path:'/sifarishler_siyahisi', component:List, name:'sifarisler'},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     
     {path:'/login', component:Login, name: 'login'},

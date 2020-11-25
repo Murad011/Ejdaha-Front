@@ -4,17 +4,17 @@
       <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
       <v-geosearch :options="geosearchOptions" ></v-geosearch>
       <l-marker :lat-lng="marker">
-        <l-icon :icon-size="iconSize" :icon-url="icon"></l-icon>
+        
       </l-marker>
     </l-map>
   </div>
 </template>
 
 <script>
-import {LMap, LTileLayer, LMarker, LIcon } from 'vue2-leaflet';
+import {LMap, LTileLayer, LMarker } from 'vue2-leaflet';
 import  L  from "leaflet";
 
-import ejdaha from "../assets/ejdaha.png";
+
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 import VGeosearch from 'vue2-leaflet-geosearch';
 
@@ -24,7 +24,7 @@ export default {
     LMap,
     LTileLayer,
     LMarker,
-    LIcon,
+    
     VGeosearch
   },
   data() {
@@ -34,8 +34,6 @@ export default {
       url:'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6393a20c829a4d0ea029ca49c48cf3a2',
       attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(40.409264, 49.867092),
-      icon: ejdaha,
-      iconSize:[45,45],
       geosearchOptions: {
         provider: new OpenStreetMapProvider(),
       },
