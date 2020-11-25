@@ -10,24 +10,40 @@
               <th  v-for="data in table_head1" :key="data">{{data}}</th>
           </tr>
           <tr>
-             <td> {{customer.id}} </td>
-             <td> {{customer.ad}} </td>
-             <td> {{customer.soyad}} </td>
-             <td> {{customer.phone_number}} </td>
-             <td> {{customer.email}} </td>
-             <td> {{customer.musterinin_sifarisi}} </td>
-             <td> {{customer.location}} </td>
-             <td> {{customer.total}} </td>
+             <td class="text-center"> {{customer.id}} </td>
+             <td class="text-center"> {{customer.ad}} </td>
+             <td class="text-center"> {{customer.soyad}} </td>
+             <td class="text-center"> {{customer.phone_number}} </td>
+             <td class="text-center"> {{customer.email}} </td>
+             <td class="text-center"> {{customer.musterinin_sifarisi}} </td>
+             <td class="text-center"> {{customer.location}} </td>
+             <td class="text-center"> {{customer.total}} </td>
           </tr>
       </table>
       </div>
       </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <table class="font" id="courier">
+              <tr>
+                <th  v-for="data in table_head2" :key="data">{{data}}</th>
+              </tr>
+              <tr class="text-center">
+                <td class="text-center"> {{courier.ad}} </td>
+                <td class="text-center"> {{courier.soyad}} </td>
+                <td class="text-center"> {{courier.phone_number}} </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     <div class="container">
         <Map/>
     </div> 
     <div class="container my-4">
-      <router-link :to="'/preview/'+customer.id"><button type="button" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button></router-link>
+      <button type="button" @click="gonder" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button>
       </div>
   </div>
 </template>
@@ -43,7 +59,13 @@ export default {
     return{
       id: this.$route.params.id,
       customer: {},
-      courier:{},
+      courier:{
+        id:'',
+        ad:'',
+        soyad:'',
+        phone_number:'',
+        is_busy:''
+      },
       table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifarish','Location','Total'],
       table_head2:['Ad',"Soyad",'Telefon'],
       search: ''
@@ -73,8 +95,93 @@ export default {
         .then(data => {
           this.customer = data
             
+          });
+
+          fetch('http://127.0.0.1:8000/courier/',{
+            method:'GET',
+            headers:{
+              
+              'Authorization': token 
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            for (let index = 0; index < data.length; index++) {
+              const element = data[index];
+              if (element.is_busy === false) {
+                this.courier.id = element.id
+                this.courier.ad = element.ad
+                this.courier.soyad = element.soyad
+                this.courier.phone_number = element.phone_number
+                this.courier.is_busy = element.is_busy
+
+              }
+            }
           })
   },
+  methods:{
+    gonder(){
+      const delivery_data = {
+        musterinin_adi:this.customer.ad,
+        musterinin_soyadi:this.customer.soyad,
+        musterinin_sifarisi:this.customer.musterinin_sifarisi,
+        musterinin_nomresi:this.customer.phone_number,
+        kuryerin_adi:this.courier.ad,
+        kuryerin_soyadi:this.courier.soyad,
+        kuryerin_nomresi:this.courier.phone_number,
+        location:this.customer.location,
+        total:this.customer.total
+      }
+      const api = localStorage.getItem("JWT");
+      const token = 'Bearer ' + api
+      fetch('http://127.0.0.1:8000/delivery/',{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          'Authorization': token 
+        },
+        body:JSON.stringify(delivery_data)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+
+
+      fetch('http://127.0.0.1:8000/customer/'+this.id+'/',{
+        method:'DELETE',
+        headers:{
+          'Authorization': token 
+        }
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      
+      const data = {
+        ad: this.courier.ad,
+        soyad: this.courier.soyad,
+        phone_number: this.courier.phone_number,
+        is_busy:true
+      }
+
+      fetch('http://127.0.0.1:8000/courier/'+this.courier.id+'/',{
+        method:'PUT',
+        headers:{
+          'Content-Type':'application/json',
+          'Authorization': token 
+        },
+        body:JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+
+      alert('SIFARIS GONDERILDI')
+      
+      this.$router.replace({name:'sifarisler'})
+
+
+
+    }
+ 
+   }
   
 }
 </script>

@@ -4,19 +4,19 @@
     <div class="card">
         <img class="image1" src="./image/freecourier.png" alt="">
         <em class="font text-white"> Total Free Couriers</em>
-        <b class="font text-white"> 10 </b>
+        <b class="font text-white"> {{free_couriers}} </b>
     </div>
 
     <div class="card bg-danger">
         <img class="image2" src="./image/busycourier.png" alt="">
        <em class="font text-white"> Total Busy Couriers </em>
-       <b class="font text-white"> 10 </b>
+       <b class="font text-white"> {{busy_couriers}} </b>
     </div>
 
     <div class="card bg-success">
        <img class="image3" src="./image/packages.png" alt="">
        <em class="font text-white"> Total Delivery Packages </em>
-       <b class="font text-white">10 </b>
+       <b class="font text-white"> {{delivery_packages}} </b>
     </div>
 
 </div>
@@ -38,8 +38,9 @@ export default {
     },
     data(){
         return{
-            free_couriers:"",
-            busy_couriers:""
+            free_couriers:0,
+            busy_couriers:0,
+            delivery_packages:0
         }
     },
     beforeCreate(){
@@ -62,16 +63,29 @@ export default {
         .then(data => {
             for (let index = 0; index < data.length; index++) {
                 const element = data[index]
-                console.log('ELEMENT =>', element)
-                const busy = [];
-                const free = [];
                 if (element.is_busy === false) {
-                    free.push(element)
-                    console.log('FREE =>', free) 
-                }else if(element.is_busy === true){
-                    busy.push(element)
-                    console.log('BUSY =>',busy)
+                    this.free_couriers+=1
+                    console.log('FREE =====>', this.free_couriers)
+                    
+                } else {
+                    this.busy_couriers+=1
+                    console.log('BUSY =====>', this.busy_couriers)
                 }
+            }
+        })
+
+        fetch('http://127.0.0.1:8000/delivery/',{
+           headers:{
+            'Authorization': token 
+          } 
+        })
+        .then(response => response.json())
+        .then(data =>{
+            for (let index = 0; index < data.length; index++) {
+                const element = data[index];
+                this.delivery_packages += 1
+                console.log(element)
+                console.log(this.delivery_packages)
             }
         })
     }

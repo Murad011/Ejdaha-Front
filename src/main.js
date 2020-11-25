@@ -51,11 +51,11 @@ Vue.use(VueGoogleMaps, {
 const router = new VueRouter({
   routes: [
     {path: '/', redirect:{
-      name: 'header'
+      name: 'login'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
     {path: '/staticties', component: MonthStaticties},
-    {path:'/sifarishler_siyahisi', component:List},
+    {path:'/sifarishler_siyahisi', component:List, name:'sifarisler'},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     
     {path:'/login', component:Login, name: 'login'},
