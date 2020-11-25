@@ -86,7 +86,6 @@ export default {
         for (let index = 0; index < data.length; index++) {
           if (data[index].is_busy === false) {
             this.courier.push(data[index]);
-            console.log(this.courier);
           }
         }
       });

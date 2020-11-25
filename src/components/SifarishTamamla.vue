@@ -143,7 +143,7 @@ export default {
         body:JSON.stringify(delivery_data)
       })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {})
 
 
       fetch('http://127.0.0.1:8000/customer/'+this.id+'/',{
@@ -153,7 +153,7 @@ export default {
         }
       })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {})
       
       const data = {
         ad: this.courier.ad,
@@ -171,7 +171,7 @@ export default {
         body:JSON.stringify(data)
       })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {})
 
       alert('SIFARIS GONDERILDI')
       
