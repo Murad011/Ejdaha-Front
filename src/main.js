@@ -8,7 +8,7 @@ import VueRouter   from "vue-router";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import { Icon } from 'leaflet';
-
+import Notifications from 'vue-notification'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
 
@@ -22,11 +22,12 @@ Icon.Default.mergeOptions({
 });
 
 
-
+Vue.use(Notifications)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+
 
 
 
@@ -54,7 +55,7 @@ const router = new VueRouter({
       name: 'login'
     } },
     {path:'/ana_sehife', component:Header, name:'header'},
-    {path: '/staticties', component: MonthStaticties},
+    {path: '/staticties', component: Statistika},
     {path:'/sifarishler_siyahisi', component:List, name:'sifarisler'},
     {path:'/sifarishi_tamamla/:id',component:SifarishTamamla},
     

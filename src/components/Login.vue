@@ -96,8 +96,7 @@ export default {
             EventBus.$emit("loggedIn", this.clickCount);
           }
         })
-        .catch((error) => {
-        });
+        
     },
   },
 };

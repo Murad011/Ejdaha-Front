@@ -128,10 +128,7 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
       })
       .then(response => {
         this.APIResult = response.data;
-      }) 
-      .catch(err => {
-          console.log(err);
-        });
+      })
 
     }
   }

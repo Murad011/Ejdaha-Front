@@ -41,22 +41,26 @@
       </div>
     <div class="container">
         <Map/>
+        
     </div> 
     <div class="container my-4">
       <button type="button" @click="gonder" id="button" class="btn btn-primary btn-lg btn-block">Tesdiq et</button>
       </div>
+      
   </div>
 </template>
 
 <script>
 import Map from './Map.vue'
 export default {  
+  
         components: {
             Map
            
         },
   data(){
     return{
+      
       id: this.$route.params.id,
       customer: {},
       courier:{
@@ -143,7 +147,6 @@ export default {
         body:JSON.stringify(delivery_data)
       })
       .then(response => response.json())
-      .then(data => {})
 
 
       fetch('http://127.0.0.1:8000/customer/'+this.id+'/',{
@@ -153,7 +156,6 @@ export default {
         }
       })
       .then(response => response.json())
-      .then(data => {})
       
       const data = {
         ad: this.courier.ad,
@@ -171,9 +173,12 @@ export default {
         body:JSON.stringify(data)
       })
       .then(response => response.json())
-      .then(data => {})
 
-      alert('SIFARIS GONDERILDI')
+      this.$notify({
+      group: 'foo',
+      title: 'Təsdiq edildi',
+      text: 'Sifariş göndərildi'
+});
       
       this.$router.replace({name:'sifarisler'})
 
@@ -231,7 +236,17 @@ th,td {
     font-family: 'Raleway', sans-serif;
 }
 
-
+.vue-notification {
+  padding: 10px;
+  margin: 0 5px 5px;
+ 
+  font-size: 12px;
+ 
+  color: #ffffff;
+  background: #44A4FC;
+  border-left: 5px solid #187FE7;
+ 
+}
 
 
 .search_div{
