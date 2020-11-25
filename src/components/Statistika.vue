@@ -2,7 +2,7 @@
   <div class="d-flex flex-column justify-content-center align-items-center" style="height: 80vh">
     <div class="p-2">
       <h1 >Enter to predict Loyal Custom</h1>
-      <h1 class="xett"  style="font-size:2rem">{{APIResult}}</h1>
+      <h1 class="bg-success text-center text-white"  style="font-size:2rem">{{APIResult}}</h1>
     </div>
     <div class="p-2">
       <form @submit.prevent>
@@ -140,15 +140,3 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
 };
 </script>
 
-<style scoped>
-.xett{
-  background-color: #041c3f;
-}
-
-#tesdiq{
-  background-color: #041c3f;
-}
-
-
-
-</style>
