@@ -130,6 +130,7 @@ export default {
         musterinin_soyadi:this.customer.soyad,
         musterinin_sifarisi:this.customer.musterinin_sifarisi,
         musterinin_nomresi:this.customer.phone_number,
+        email: this.customer.email,
         kuryerin_adi:this.courier.ad,
         kuryerin_soyadi:this.courier.soyad,
         kuryerin_nomresi:this.courier.phone_number,
@@ -222,8 +223,9 @@ export default {
     border-spacing: 0;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 20px 10px rgba(32, 32, 32, .3);
-    
+    background: #04152e;
     text-align: center;
+    color: white;
     
 }
 

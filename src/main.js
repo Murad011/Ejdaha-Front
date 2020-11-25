@@ -34,7 +34,6 @@ Vue.use(IconsPlugin)
 import Header from './components/Header.vue'
 import Statistika from './components/Statistika.vue'
 import List from "./components/List.vue"
-import Preview from './components/Preview.vue'
 import SifarishTamamla from './components/SifarishTamamla.vue'
 
 import Login from './components/Login.vue'
@@ -61,7 +60,6 @@ const router = new VueRouter({
     
     {path:'/login', component:Login, name: 'login'},
     
-    {path:'/preview/:id', component:Preview}
   ],
   mode:'history'
 })
