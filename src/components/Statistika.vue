@@ -2,7 +2,7 @@
   <div class="d-flex flex-column justify-content-center align-items-center" style="height: 80vh">
     <div class="p-2">
       <h1 >Enter to predict Loyal Custom</h1>
-      <h1 class="bg-primary text-center text-white "  style="font-size:2rem">{{APIResult}}</h1>
+      <h1 class="xett"  style="font-size:2rem">{{APIResult}}</h1>
     </div>
     <div class="p-2">
       <form @submit.prevent>
@@ -79,7 +79,7 @@
               id="RFMScore"
             />
           </div>
-          <button @click="predict" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+          <button @click="predict" type="button" id="tesdiq" class="btn btn-primary btn-lg btn-block">Təsdiq Et</button>
         </div>
       </form>
     </div>
@@ -140,5 +140,15 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
 };
 </script>
 
-<style>
+<style scoped>
+.xett{
+  background-color: #041c3f;
+}
+
+#tesdiq{
+  background-color: #041c3f;
+}
+
+
+
 </style>

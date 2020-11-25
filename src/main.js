@@ -31,7 +31,7 @@ Vue.use(IconsPlugin)
 
 
 import Header from './components/Header.vue'
-import MonthStaticties from './components/MonthStaticties.vue'
+import Statistika from './components/Statistika.vue'
 import List from "./components/List.vue"
 import Preview from './components/Preview.vue'
 import SifarishTamamla from './components/SifarishTamamla.vue'
