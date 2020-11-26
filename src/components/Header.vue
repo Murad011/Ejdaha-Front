@@ -3,13 +3,13 @@
     <div class="card_div">
       <div class="card">
         <img class="image1" src="./image/freecourier.png" alt="" />
-       <em class="font text-white" id="free">Ərazidə Olan Kuryerlər</em>
+       <em class="font text-white" id="free">Ərazidə Olmayan Kuryerlər</em>
         <b class="font text-white"> {{ free_couriers }} </b>
       </div>
 
       <div class="card bg-danger">
         <img class="image2" src="./image/busycourier.png" alt="" />
-        <em class="font text-white" id="busy">Ərazidə Olmayan Kuryerlər </em>
+        <em class="font text-white" id="busy">Ərazidə Olan Kuryerlər </em>
         <b class="font text-white"> {{ busy_couriers }} </b>
       </div>
 

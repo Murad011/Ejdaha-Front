@@ -8,7 +8,7 @@
             <li class="mx-5" v-show="visible"><router-link to="/sifarishler_siyahisi"> <i class="fas fa-address-card"></i>Sifarişlər Siyahısı</router-link> </li>
         </ul> 
         <div  v-show="visible" class="social_media">
-          <router-link to="login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>
+          <router-link to="/login"><i @click="logOut" class="fas fa-sign-out-alt"></i></router-link>
           
       </div>
     </div>

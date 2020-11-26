@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 80vh">
+  <div class="d-flex mt-4 statistika flex-column justify-content-center align-items-center" style="height: 80vh">
     <div class="p-2">
       <h1 >Enter to predict Loyal Custom</h1>
       <h1 class="bg-success text-center text-white"  style="font-size:2rem">{{APIResult}}</h1>
@@ -140,5 +140,7 @@ getAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('J
 .btn-primary{
   background-color: #041c3f;
 }
+
+
 
 </style>

@@ -18,6 +18,7 @@
              <td class="text-center"> {{customer.musterinin_sifarisi}} </td>
              <td class="text-center"> {{customer.location}} </td>
              <td class="text-center"> {{customer.total}} </td>
+             <td class="text-center"> {{customer.time}}</td>
           </tr>
       </table>
       </div>
@@ -70,7 +71,7 @@ export default {
         phone_number:'',
         is_busy:''
       },
-      table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifarish','Location','Total'],
+      table_head1:['No','Ad',"Soyad",'Telefon','Email','Sifarish','Location','Total','Tarix'],
       table_head2:['Ad',"Soyad",'Telefon'],
       search: ''
     }},

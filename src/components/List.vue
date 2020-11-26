@@ -15,6 +15,8 @@
                   <th class="cell100 column5">Sifariş</th>
                   <th class="cell100 column5">Adress</th>
                   <th class="cell100 column5">Qiymət</th>
+                  <th class="cell100 column5">Tarix</th>
+
 
 								</tr>
 							</thead>
@@ -33,6 +35,7 @@
                   <td>  {{data.musterinin_sifarisi}} </td>
                   <td>  {{data.location}} </td>
                   <td>  {{data.total}} </td>
+                  <td>  {{data.time}}  </td>
 								</tr>
                 
                          
@@ -50,7 +53,7 @@
 export default {
     data() {
       return {
-        tableHead:["No:","Ad","Soyad","telefon",'email','sifaris','location','total'],
+        tableHead:["No:","Ad","Soyad","telefon",'email','sifaris','location','total','time'],
         datas: [],
         search:''
       }
@@ -79,7 +82,7 @@ export default {
         .then(response => response.json())
         .then(data => {
             for (let index = 0; index < data.length; index++) {
-                this.datas = data                
+                this.datas = data              
             }
         })
 
